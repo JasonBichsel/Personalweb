@@ -14,6 +14,7 @@ function HomePage() {
                     <li><a href="#it-skills">IT-skills</a></li>
                     <li><a href="#education-timeline">Ausbildung</a></li>
                     <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact-footer">Kontakt</a></li>
                 </ul>
             </nav>
             <header>
@@ -172,8 +173,32 @@ function HomePage() {
                 </div>
             </main>
             <footer id="contact-footer" className="content-section">
+                <div id="details">
+                    <div>
+                        <a href="https://www.wiss.ch/de-CH"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://www.wiss.ch/de-CH"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                    </div>
+                    <div>
+                        <strong>Navigation:</strong>
+                        <p></p>
+                        <ul>
+                            <li><a href="#welcome-section">Wilkommen</a></li>
+                            <li><a href="#about-me">Über mich</a></li>
+                            <li><a href="#it-skills">IT Skills</a></li>
+                            <li><a href="#education-timeline">Ausbildung</a></li>
+                            <li><a href="#projects">Projekte</a></li>
+                            <li><a href="#contact-footer">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>Kontakt Daten:</strong>
+                        <p>Jason Bichsel</p>
+                        <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
+                        <p>Tel: 079 913 97 48</p>
+                    </div>
+                </div>
                 <div>
-
+                    
                 </div>
             </footer>
         </div>
