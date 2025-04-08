@@ -11,6 +11,7 @@ function HomePage() {
                     <li><a href="#header-container">Wilkommen</a></li>
                     <li><a href="#about-me">Über mich</a></li>
                     <li><a href="#it-skills">IT-skills</a></li>
+                    <li><a href="#education-timeline">Ausbildung</a></li>
                 </ul>
             </nav>
             <header>
@@ -79,7 +80,81 @@ function HomePage() {
                             </li>
                         </ul>
                     </div>
-
+                    <div id="education-timeline" className="content-section">
+                        <h2>Ausbildung</h2>
+                        <table id="education-table" className="table-container">
+                            <thead>
+                                <tr className="education-header">
+                                    <th><h3><strong>Informatiker Applikationsentwicklung</strong></h3></th>
+                                    <th></th>
+                                </tr>
+                                <tr className="school-row">
+                                    <th><p>Schule:</p></th>
+                                    <th><p>WISS Schulen für Wirtschaft Informatik Immobilien</p></th>
+                                </tr>
+                                <tr className="location-row"> 
+                                    <th><p>Ort:</p></th>
+                                    <th><p>Zürich, Zürich-Altstetten</p></th>
+                                </tr>
+                                <tr className="start-date-row">
+                                    <th><p>Start Datum: </p></th>
+                                    <th><p>August, 2023</p></th>
+                                </tr>
+                                <tr>
+                                    <th><p>Ende Datum: </p></th>
+                                    <th><p>laufend</p></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table id="secondary-school" className="table-container">
+                            <thead>
+                                <tr className="education-header">
+                                    <th><h3><strong>Schule</strong></h3></th>
+                                    <th></th>
+                                </tr>
+                                <tr className="school-row">
+                                    <th><p>Schule:</p></th>
+                                    <th><p>Rotkreuz Oberstufeschule Sekundarstufe</p></th>
+                                </tr>
+                                <tr className="location-row"> 
+                                    <th><p>Ort:</p></th>
+                                    <th><p>Zug, Rotkreuz</p></th>
+                                </tr>
+                                <tr className="start-date-row">
+                                    <th><p>Start Datum: </p></th>
+                                    <th><p>August, 2020</p></th>
+                                </tr>
+                                <tr>
+                                    <th><p>Ende Datum: </p></th>
+                                    <th><p>August, 2023</p></th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table id="primary-school" className="table-container">
+                            <thead>
+                                <tr className="education-header">
+                                    <th><h3><strong>Schule</strong></h3></th>
+                                    <th></th>
+                                </tr>
+                                <tr className="school-row">
+                                    <th><p>Schule:</p></th>
+                                    <th><p>Rotkreuz Primarschule</p></th>
+                                </tr>
+                                <tr className="location-row"> 
+                                    <th><p>Ort:</p></th>
+                                    <th><p>Zug, Rotkreuz</p></th>
+                                </tr>
+                                <tr className="start-date-row">
+                                    <th><p>Start Datum: </p></th>
+                                    <th><p>August, 2014</p></th>
+                                </tr>
+                                <tr>
+                                    <th><p>Ende Datum: </p></th>
+                                    <th><p>August, 2020</p></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </main>
             <footer id="contact-footer" className="content-section">
