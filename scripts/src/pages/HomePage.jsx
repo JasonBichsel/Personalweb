@@ -197,8 +197,14 @@ function HomePage() {
                         <p>Tel: 079 913 97 48</p>
                     </div>
                 </div>
-                <div>
-                    
+                <div className="social-links">
+                    <a className="linkedin-link" href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                    <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
+                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github"></i>
+                    </a>
                 </div>
             </footer>
         </div>
