@@ -9,6 +9,8 @@ function HomePage() {
             <nav>
                 <ul>
                     <li><a href="#header-container">Wilkommen</a></li>
+                    <li><a href="#about-me">Über mich</a></li>
+                    <li><a href="#it-skills">IT-skills</a></li>
                 </ul>
             </nav>
             <header>
@@ -32,6 +34,52 @@ function HomePage() {
                         <h2>Interessen</h2> 
                         <p>Computer zusammenbauen, Webseiten erstellen, Gaming und Polizei-Serien.</p>
                     </div>
+                    <div id="it-skills" className="content-section">
+                        <h2>IT-Skills</h2>
+                        <ul>
+                            <li>
+                                <span className="skill-name">Linux Docker</span>
+                                <span className="skill-rating">(8/10)</span>
+                                <span className="skill-stars">★★★★★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">Java</span>
+                                <span className="skill-rating">(6/10)</span>
+                                <span className="skill-stars">★★★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">Nosql MongoDB</span>
+                                <span className="skill-rating">(6/10)</span>
+                                <span className="skill-stars">★★★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">HTML</span>
+                                <span className="skill-rating">(6/10)</span>
+                                <span className="skill-stars">★★★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">Linux Bash</span>
+                                <span className="skill-rating">(6/10)</span>
+                                <span className="skill-stars">★★★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">JavaScript</span>
+                                <span className="skill-rating">(6/10)</span>
+                                <span className="skill-stars">★★★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">MySQL</span>
+                                <span className="skill-rating">(4/10)</span>
+                                <span className="skill-stars">★★★★</span>
+                            </li>
+                            <li>
+                                <span className="skill-name">PHP</span>
+                                <span className="skill-rating">(2/10)</span>
+                                <span className="skill-stars">★★</span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </main>
             <footer id="contact-footer" className="content-section">
