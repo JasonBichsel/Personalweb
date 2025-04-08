@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import PlaceholderImage from './img/Placeholderjpg.jpg';
 
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
                     <li><a href="#about-me">Über mich</a></li>
                     <li><a href="#it-skills">IT-skills</a></li>
                     <li><a href="#education-timeline">Ausbildung</a></li>
+                    <li><a href="#projects">Projekte</a></li>
                 </ul>
             </nav>
             <header>
@@ -154,6 +156,18 @@ function HomePage() {
                                 </tr>
                             </thead>
                         </table>
+                    </div>
+                    <div id="projects"> 
+                        <h2>Projekte</h2>
+                        <div className="project-container">
+                            <div>
+                                <img src={PlaceholderImage} alt="Placeholder"/>
+                                <p>Eine kurze Beschreibung für das Projekts.</p>
+                                <a href="https://github.com/JasonBichsel/mein-projekt" target="_blank" rel="noopener noreferrer">
+                                    <p><strong>Mein Projekt</strong></p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
