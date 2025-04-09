@@ -8,6 +8,7 @@ function App() {
         <BrowserRouter> {/* Routes mit BrowserRouter einwickeln */}
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/Personalweb" element={<HomePage />} />
             </Routes>
         </BrowserRouter>
     );

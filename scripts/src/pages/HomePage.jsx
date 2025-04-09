@@ -7,16 +7,16 @@ import PlaceholderImage from './img/Placeholderjpg.jpg';
 function HomePage() {
     return (
         <div id="homepage-backgrund">
-            <nav>
-                <ul>
-                    <li><a href="#header-container">Wilkommen</a></li>
-                    <li><a href="#about-me">Über mich</a></li>
-                    <li><a href="#it-skills">IT-skills</a></li>
-                    <li><a href="#education-timeline">Ausbildung</a></li>
-                    <li><a href="#projects">Projekte</a></li>
-                    <li><a href="#contact-footer">Kontakt</a></li>
-                </ul>
-            </nav>
+            <nav id="main-navigation" className="navigation-bar">
+                 <ul>
+                     <li><a href="#header-container">Wilkommen</a></li>
+                     <li><a href="#about-me">Über mich</a></li>
+                     <li><a href="#it-skills">IT-skills</a></li>
+                     <li><a href="#education-timeline">Ausbildung</a></li>
+                     <li><a href="#projects">Projekte</a></li>
+                     <li><a href="#contact-footer">Kontakt</a></li>
+                 </ul>
+             </nav>
             <header>
                 <div id="header-container" className="content-section">
                     <h1>Hallo, ich bin Jason</h1>
