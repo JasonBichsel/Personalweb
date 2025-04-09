@@ -280,3 +280,37 @@ body, html {
   #details a:hover {
     text-decoration: underline;
   }
+  .social-links {
+    display: flex;
+    align-items: center; /* Vertikal zentrieren */
+    justify-content: center; /* Horizontal zentrieren */
+    gap: 10px; /* Abstand zwischen den Elementen */
+    padding: 10px; /* Innenabstand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    margin: 20px 0; /* Abstand zum Rest der Seite */
+  }
+  
+  .linkedin-link, .github-link {
+    font-size: 24px; /* Größe der Icons */
+    color: #0077b5; /* LinkedIn Farbe */
+    transition: color 0.3s ease;
+  }
+  
+  .github-link {
+    color: #333; /* GitHub Farbe */
+  }
+  
+  .linkedin-link:hover, .github-link:hover {
+    color: #555; /* Hover-Effekt für beide Links */
+  }
+  
+  .linkedin-name {
+    font-size: 16px; /* Größe des Namens */
+    margin: 0; /* Entfernt den Standardabstand */
+    color: #333; /* Textfarbe */
+  }
+  
+  .social-links a {
+    text-decoration: none; /* Entfernt Unterstreichung */
+  }
+  
