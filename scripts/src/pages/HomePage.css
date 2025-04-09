@@ -46,7 +46,7 @@ body, html {
   .navigation-bar li a:hover {
     background-color: #444;
   }
-  
+
   header {
     padding-top: 100px;
     text-align: center;
@@ -65,4 +65,42 @@ body, html {
     border-radius: 15px;
     margin-bottom: 30px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .main-container {
+    padding: 20px;
+  }
+  
+  #it-skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #it-skills li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .skill-name {
+    flex: 2;
+    font-weight: bold;
+  }
+  
+  .skill-rating {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .skill-stars {
+    flex: 1;
+    text-align: right;
+    color: #e59866;
+    white-space: nowrap;
   }
