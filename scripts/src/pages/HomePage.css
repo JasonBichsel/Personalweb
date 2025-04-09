@@ -104,3 +104,36 @@ body, html {
     color: #e59866;
     white-space: nowrap;
   }
+  .table-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    table-layout: fixed; /* <- Macht alle Zellen gleich breit */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .table-container th, 
+  .table-container td {
+    text-align: left;
+    padding: 12px 16px;
+    width: 50%; /* Jede Spalte nimmt 50% ein */
+    box-sizing: border-box;
+  }
+  
+  .table-container thead tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .education-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .table-container p {
+    margin: 0;
+  }
