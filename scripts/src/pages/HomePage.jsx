@@ -2,7 +2,7 @@ import React from "react";
 import "./HomePage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PlaceholderImage from './img/Placeholderjpg.jpg';
-
+import TicTacToe from './img/Tic-Tac-Toe.jpg';
 
 function HomePage() {
     return (
@@ -162,11 +162,10 @@ function HomePage() {
                         <h2>Projekte</h2>
                         <div className="project-container">
                             <div>
-                                <img src={PlaceholderImage} alt="Placeholder"/>
-                                <p>Eine kurze Beschreibung für das Projekts.</p>
-                                <a href="https://github.com/JasonBichsel/mein-projekt" target="_blank" rel="noopener noreferrer">
-                                    <p><strong>Mein Projekt</strong></p>
-                                </a>
+                                <img src={TicTacToe} alt="Tic-Tac-Toe"/>
+                                <p>Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.</p>
+                                <a href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"> <p><strong>Tic-Tac-Toe</strong></p></a>
+                                <a className="github-link" href="https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -202,9 +201,7 @@ function HomePage() {
                         <i className="fab fa-linkedin"></i>
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
-                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-github"></i>
-                    </a>
+                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                 </div>
             </footer>
         </div>
