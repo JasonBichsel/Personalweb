@@ -174,8 +174,8 @@ function HomePage() {
             <footer id="contact-footer" className="content-section">
                 <div id="details">
                     <div>
-                        <a href="https://www.wiss.ch/de-CH"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://www.wiss.ch/de-CH"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://jasonbichsel.github.io/company_application_platform_frontend/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://jasonbichsel.github.io/company_application_platform_frontend/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
                     </div>
                     <div>
                         <strong>Navigation:</strong>
