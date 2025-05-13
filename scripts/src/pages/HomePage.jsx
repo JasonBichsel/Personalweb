@@ -164,8 +164,8 @@ function HomePage() {
                             <div>
                                 <img src={TicTacToe} alt="Tic-Tac-Toe"/>
                                 <p>Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.</p>
-                                <a href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"> <p><strong>Tic-Tac-Toe</strong><i> </i><i className="fas fa-external-link-alt"></i></p></a>
-                                <a className="github-link" href="https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i><i> </i><i className="fas fa-external-link-alt"></i></a>
+                                <a href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"> <p><strong>Tic-Tac-Toe</strong></p></a>
+                                <a className="github-link" href="https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i><i> | </i><i className="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
