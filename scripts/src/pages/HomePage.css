@@ -219,7 +219,22 @@ body, html {
   ul li {
     margin-bottom: 8px; /* Abstand zwischen den Listenelementen */
   }
-  
+  .link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Abstand zwischen den Elementen */
+  }
+
+  .link-container a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+  }
+  .titel {
+    text-align: center; /* Zentriert den Text horizontal */
+    margin: 20px 0; /* Fügt oben und unten Abstand hinzu */
+  }
   footer {
     background-color: #5e5c5a;
     color: white;

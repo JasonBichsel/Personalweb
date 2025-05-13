@@ -162,10 +162,14 @@ function HomePage() {
                         <h2>Projekte</h2>
                         <div className="project-container">
                             <div>
-                                <img src={TicTacToe} alt="Tic-Tac-Toe"/>
+                            <img src={TicTacToe} alt="Tic-Tac-Toe"/>
                                 <p>Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.</p>
-                                <a href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"> <p><strong>Tic-Tac-Toe</strong></p></a>
-                                <a className="github-link" href="https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i><i> | </i><i className="fas fa-external-link-alt"></i></a>
+                                <p className="titel"><strong>Tic-Tac-Toe</strong></p>
+                                <div className="link-container">
+                                    <a className="github-link" href="https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <i> | </i>
+                                    <a className="github-link" href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,6 +180,8 @@ function HomePage() {
                     <div>
                         <a href="https://jasonbichsel.github.io/company_application_platform_frontend/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
                         <a href="https://jasonbichsel.github.io/company_application_platform_frontend/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://github.com/JasonBichsel"  target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/"  target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
                     </div>
                     <div>
                         <strong>Navigation:</strong>
