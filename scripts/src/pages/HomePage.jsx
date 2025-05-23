@@ -162,7 +162,7 @@ function HomePage() {
                         <h2>Projekte</h2>
                         <div className="project-container">
                             <div>
-                            <img src={TicTacToe} alt="Tic-Tac-Toe"/>
+                                <img src={TicTacToe} alt="Tic-Tac-Toe"/>
                                 <p>Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.</p>
                                 <p className="titel"><strong>Tic-Tac-Toe</strong></p>
                                 <div className="link-container">
@@ -170,6 +170,29 @@ function HomePage() {
                                     <i> | </i>
                                     <a className="github-link" href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
                                 </div>
+                                <p className="titel"><strong>Status: Fertig</strong></p>
+                            </div>
+                            <div>
+                                <img src={PlaceholderImage} alt="Firmenbewerbungsplattform"/>
+                                <p>Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.</p>
+                                <p className="titel"><strong>Firmenbewerbungsplattform</strong></p>
+                                <div className="link-container">
+                                    <a className="github-link" href="https://github.com/JasonBichsel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <i> | </i>
+                                    <a className="github-link" href="https://jasonbichsel.github.io/company_application_platform_frontend/#/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <p className="titel"><strong>Status: Verbesserung</strong></p>
+                            </div>
+                            <div>
+                                <img src={PlaceholderImage} alt="Immobilienplattform"/>
+                                <p>Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen.</p>
+                                <p className="titel"><strong>Immobilienplattform</strong></p>
+                                <div className="link-container">
+                                    <a className="github-link" href="https://github.com/JasonBichsel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                    <i> | </i>
+                                    <a className="github-link" href="https://jasonbichsel.github.io/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <p className="titel"><strong>Status: Entwicklung</strong></p>
                             </div>
                         </div>
                     </div>
