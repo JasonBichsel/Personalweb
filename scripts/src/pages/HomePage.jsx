@@ -179,7 +179,7 @@ function HomePage() {
                                 <div className="link-container">
                                     <a className="github-link" href="https://github.com/JasonBichsel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                     <i> | </i>
-                                    <a className="github-link" href="https://jasonbichsel.github.io/company_application_platform_frontend/#/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
+                                    <a className="github-link" href="https://company-application-platform-frontend.pages.dev/#/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
                                 </div>
                                 <p className="titel"><strong>Status: Verbesserung</strong></p>
                             </div>
@@ -201,8 +201,8 @@ function HomePage() {
             <footer id="contact-footer" className="content-section">
                 <div id="details">
                     <div>
-                        <a href="https://jasonbichsel.github.io/company_application_platform_frontend/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://jasonbichsel.github.io/company_application_platform_frontend/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://company-application-platform-frontend.pages.dev/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://company-application-platform-frontend.pages.dev/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
                         <a href="https://github.com/JasonBichsel"  target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
                         <a href="https://www.linkedin.com/in/jason-bichsel/"  target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
                     </div>
