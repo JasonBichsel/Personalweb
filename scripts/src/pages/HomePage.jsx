@@ -6,6 +6,7 @@ import TicTacToe from './img/Tic-Tac-Toe.jpg';
 import Notepad from './img/Notepad.jpg';
 import Calculator from './img/Calculator.jpg';
 import RandomNumberGame from './img/Random.Number.Game.jpg';
+import FirmenBP from './img/FirmenBP.jpg';
 
 function HomePage() {
     const [activeTab, setActiveTab] = useState("main");
@@ -48,7 +49,7 @@ function HomePage() {
         status: "Fertig"
     },
     {
-        img: PlaceholderImage,
+        img: FirmenBP,
         alt: "Firmenbewerbungsplattform",
         desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
         title: "Firmenbewerbungsplattform",
