@@ -3,6 +3,9 @@ import "./HomePage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PlaceholderImage from './img/Placeholderjpg.jpg';
 import TicTacToe from './img/Tic-Tac-Toe.jpg';
+import Notepad from './img/Notepad.jpg';
+import Calculator from './img/Calculator.jpg';
+import RandomNumberGame from './img/Random.Number.Game.jpg';
 
 function HomePage() {
     const [activeTab, setActiveTab] = useState("main");
@@ -10,17 +13,32 @@ function HomePage() {
     const [showAllMain, setShowAllMain] = useState(false);
     const otherProjects = [
         {
-            img: PlaceholderImage,
-            alt: "",
-            desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
-            title: "Firmenbewerbungsplattform",
-            github: "https://github.com/JasonBichsel/",
-            live: "https://company-application-platform-frontend.pages.dev/#/",
-            status: "Verbesserung"
+            img: Notepad,
+            alt: "Notepad",
+            desc: "Eine einfache Notiz-Java applikation, die es ermöglicht, Notizen zu erstellen, zu bearbeiten und zu löschen.",
+            title: "Notepad",
+            github: "https://github.com/JasonBichsel/Notepad",
+            status: "Fertig"
+        },
+        {
+            img: Calculator,
+            alt: "Calculator",
+            desc: "Eine einfache Java Applikation, die es ermöglicht, einfache mathematische Operationen durchzuführen.",
+            title: "Calculator",
+            github: "https://github.com/JasonBichsel/Calculator",
+            status: "Fertig"
+        },
+        {
+            img: RandomNumberGame,
+            alt: "Random Number Game",
+            desc: "Eine einfache Java Applikation, die es ermöglicht, zufällige Zahlen zu generieren und zu raten.",
+            title: "Random Number Game",
+            github: "https://github.com/JasonBichsel/Random.Number.Game",
+            status: "Fertig"
         }
     ];
     const mainProjects = [
-        {
+    {
         img: TicTacToe,
         alt: "Tic-Tac-Toe",
         desc: "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
@@ -210,7 +228,7 @@ function HomePage() {
                         <div className="project-container">
                             {activeTab === "other" && (
                                 <>
-                                    {(showAllOther ? otherProjects : otherProjects.slice(0, 4)).map((proj, idx) => (
+                                    {(showAllOther ? otherProjects : otherProjects.slice(0, 2)).map((proj, idx) => (
                                         <div key={idx}>
                                             <img src={proj.img} alt={proj.alt}/>
                                             <p>{proj.desc}</p>
@@ -243,7 +261,7 @@ function HomePage() {
                                 </>
                             )}
                         </div>
-                        {activeTab === "other" && otherProjects.length > 4 && (
+                        {activeTab === "other" && otherProjects.length > 2 && (
                             <button
                                 className="view-more-btn small"
                                 onClick={() => setShowAllOther(!showAllOther)}
@@ -295,6 +313,7 @@ function HomePage() {
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
                     <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                    
                 </div>
             </footer>
         </div>
