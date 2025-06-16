@@ -70,9 +70,9 @@ function HomePage() {
         <div id="homepage-backgrund">
             <nav id="main-navigation" className="navigation-bar">
                  <ul>
-                     <li><a href="#header-container">Wilkommen</a></li>
+                     <li><a href="#header-container">Willkommen</a></li>
                      <li><a href="#about-me">Über mich</a></li>
-                     <li><a href="#it-skills">IT-skills</a></li>
+                     <li><a href="#it-skills">IT-Skills</a></li>
                      <li><a href="#education-timeline">Ausbildung</a></li>
                      <li><a href="#projects">Projekte</a></li>
                      <li><a href="#contact-footer">Kontakt</a></li>
@@ -82,7 +82,7 @@ function HomePage() {
                 <div id="header-container" className="content-section">
                     <h1>Hallo, ich bin Jason</h1>
                     <div id="welcome-section" className="">
-                        <p>Ich bin 17 Jahre alt und bin Auszubildender als Informatiker in der Fachrichtung Applikationsentwicklung.</p>
+                        <p>Ich bin 17 Jahre alt und Auszubildender als Informatiker in der Fachrichtung Applikationsentwicklung.</p>
                     </div>
                 </div>
             </header>
@@ -90,14 +90,14 @@ function HomePage() {
                 <div id="main-content" className="main-container">
                     <div id="about-me" className="content-section">
                         <h2>Über mich</h2>
-                        <p>Schon seit meiner Kindheit war es mein Ziel, Informatiker zu werden. Nun bin ich bei der WISS, um meinen Berufswunsch zu verwirklichen.</p> 
+                        <p>Schon seit meiner Kindheit war es mein Ziel, Informatiker zu werden. Nun bin ich an der WISS, um meinen Berufswunsch zu verwirklichen.</p> 
                         <p>Mein Interesse an der Informatik wurde vor allem durch das Gaming geweckt. Gleichzeitig habe ich den Drang, zu verstehen, wie bestimmte Technologien funktionieren und entwickelt werden.</p> 
                         <p>Zu meinen Stärken zählen insbesondere mein Zeitmanagement und mein analytisches Problemlösungsvermögen. Diese Fähigkeiten helfen mir, komplexe Herausforderungen strukturiert anzugehen.</p> 
                         <p>In der Teamarbeit lege ich großen Wert auf ein respektvolles und produktives Arbeitsumfeld, das von offenen Gesprächen und gegenseitiger Unterstützung lebt.</p> 
                         <p>Ich bin überzeugt, dass ich mit meinen Kompetenzen aktiv zu einer erfolgreichen Zusammenarbeit beitragen kann.</p> 
                         
                         <h2>Interessen</h2> 
-                        <p>Computer zusammenbauen, Webseiten erstellen, Gaming und Polizei-Serien.</p>
+                        <p>Computer zusammenbauen, Webseiten erstellen, Gaming und Polizeiserien.</p>
                     </div>
                     <div id="it-skills" className="content-section">
                         <h2>IT-Skills</h2>
@@ -113,7 +113,7 @@ function HomePage() {
                                 <span className="skill-stars">★★★★★★</span>
                             </li>
                             <li>
-                                <span className="skill-name">Nosql MongoDB</span>
+                                <span className="skill-name">NoSQL MongoDB</span>
                                 <span className="skill-rating">(6/10)</span>
                                 <span className="skill-stars">★★★★★★</span>
                             </li>
@@ -161,11 +161,11 @@ function HomePage() {
                                     <th><p>Zürich, Zürich-Altstetten</p></th>
                                 </tr>
                                 <tr className="start-date-row">
-                                    <th><p>Start Datum: </p></th>
-                                    <th><p>August, 2023</p></th>
+                                    <th><p>Startdatum: </p></th>
+                                    <th><p>August 2023</p></th>
                                 </tr>
                                 <tr>
-                                    <th><p>Ende Datum: </p></th>
+                                    <th><p>Endedatum: </p></th>
                                     <th><p>laufend</p></th>
                                 </tr>
                             </thead>
@@ -178,19 +178,19 @@ function HomePage() {
                                 </tr>
                                 <tr className="school-row">
                                     <th><p>Schule:</p></th>
-                                    <th><p>Rotkreuz Oberstufeschule Sekundarstufe</p></th>
+                                    <th><p>Rotkreuz Oberstufenschule Sekundarstufe</p></th>
                                 </tr>
                                 <tr className="location-row"> 
                                     <th><p>Ort:</p></th>
                                     <th><p>Zug, Rotkreuz</p></th>
                                 </tr>
                                 <tr className="start-date-row">
-                                    <th><p>Start Datum: </p></th>
-                                    <th><p>August, 2020</p></th>
+                                    <th><p>Startdatum: </p></th>
+                                    <th><p>August 2020</p></th>
                                 </tr>
                                 <tr>
-                                    <th><p>Ende Datum: </p></th>
-                                    <th><p>August, 2023</p></th>
+                                    <th><p>Endedatum: </p></th>
+                                    <th><p>August 2023</p></th>
                                 </tr>
                             </thead>
                         </table>
@@ -209,12 +209,12 @@ function HomePage() {
                                     <th><p>Zug, Rotkreuz</p></th>
                                 </tr>
                                 <tr className="start-date-row">
-                                    <th><p>Start Datum: </p></th>
-                                    <th><p>August, 2014</p></th>
+                                    <th><p>Startdatum: </p></th>
+                                    <th><p>August 2014</p></th>
                                 </tr>
                                 <tr>
-                                    <th><p>Ende Datum: </p></th>
-                                    <th><p>August, 2020</p></th>
+                                    <th><p>Endedatum: </p></th>
+                                    <th><p>August 2020</p></th>
                                 </tr>
                             </thead>
                         </table>
@@ -222,7 +222,7 @@ function HomePage() {
                     <div id="projects"> 
                         <h2>Projekte</h2>
                         <div className="tab-buttons">
-                            <button onClick={() => setActiveTab("main")} className={activeTab === "main" ? "active" : ""}>Grösstes Projekte</button>
+                            <button onClick={() => setActiveTab("main")} className={activeTab === "main" ? "active" : ""}>Grösste Projekte</button>
                             <button onClick={() => setActiveTab("other")} className={activeTab === "other" ? "active" : ""}>Weitere Projekte</button>
                         </div>
                         <div className="project-container">
@@ -292,16 +292,16 @@ function HomePage() {
                         <strong>Navigation:</strong>
                         <p></p>
                         <ul>
-                            <li><a href="#welcome-section">Wilkommen</a></li>
+                            <li><a href="#welcome-section">Willkommen</a></li>
                             <li><a href="#about-me">Über mich</a></li>
-                            <li><a href="#it-skills">IT Skills</a></li>
+                            <li><a href="#it-skills">IT-Skills</a></li>
                             <li><a href="#education-timeline">Ausbildung</a></li>
                             <li><a href="#projects">Projekte</a></li>
                             <li><a href="#contact-footer">Kontakt</a></li>
                         </ul>
                     </div>
                     <div>
-                        <strong>Kontakt Daten:</strong>
+                        <strong>Kontaktdaten:</strong>
                         <p>Jason Bichsel</p>
                         <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
                         <p>Tel: 079 913 97 48</p>
