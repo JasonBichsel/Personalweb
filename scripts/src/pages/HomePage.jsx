@@ -1,10 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomePage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import PlaceholderImage from './img/Placeholderjpg.jpg';
 import TicTacToe from './img/Tic-Tac-Toe.jpg';
 
 function HomePage() {
+    const [activeTab, setActiveTab] = useState("main");
+    const [showAllOther, setShowAllOther] = useState(false);
+    const [showAllMain, setShowAllMain] = useState(false);
+    const otherProjects = [
+        {
+            img: PlaceholderImage,
+            alt: "",
+            desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
+            title: "Firmenbewerbungsplattform",
+            github: "https://github.com/JasonBichsel/",
+            live: "https://company-application-platform-frontend.pages.dev/#/",
+            status: "Verbesserung"
+        }
+    ];
+    const mainProjects = [
+        {
+        img: TicTacToe,
+        alt: "Tic-Tac-Toe",
+        desc: "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
+        title: "Tic-Tac-Toe",
+        github: "https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs",
+        live: "https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/",
+        status: "Fertig"
+    },
+    {
+        img: PlaceholderImage,
+        alt: "Firmenbewerbungsplattform",
+        desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
+        title: "Firmenbewerbungsplattform",
+        github: "https://github.com/JasonBichsel/",
+        live: "https://company-application-platform-frontend.pages.dev/#/",
+        status: "Verbesserung"
+    },
+    {
+        img: PlaceholderImage,
+        alt: "Immobilienplattform",
+        desc: "Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen.",
+        title: "Immobilienplattform",
+        github: "https://github.com/JasonBichsel/",
+        live: "https://jasonbichsel.github.io/",
+        status: "Entwicklung"
+    }
+    ];
     return (
         <div id="homepage-backgrund">
             <nav id="main-navigation" className="navigation-bar">
@@ -160,41 +203,62 @@ function HomePage() {
                     </div>
                     <div id="projects"> 
                         <h2>Projekte</h2>
-                        <div className="project-container">
-                            <div>
-                                <img src={TicTacToe} alt="Tic-Tac-Toe"/>
-                                <p>Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.</p>
-                                <p className="titel"><strong>Tic-Tac-Toe</strong></p>
-                                <div className="link-container">
-                                    <a className="github-link" href="https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <i> | </i>
-                                    <a className="github-link" href="https://jasonbichsel.github.io/Tic-Tac-Toe-with-imgs/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
-                                </div>
-                                <p className="titel"><strong>Status: Fertig</strong></p>
-                            </div>
-                            <div>
-                                <img src={PlaceholderImage} alt="Firmenbewerbungsplattform"/>
-                                <p>Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.</p>
-                                <p className="titel"><strong>Firmenbewerbungsplattform</strong></p>
-                                <div className="link-container">
-                                    <a className="github-link" href="https://github.com/JasonBichsel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <i> | </i>
-                                    <a className="github-link" href="https://company-application-platform-frontend.pages.dev/#/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
-                                </div>
-                                <p className="titel"><strong>Status: Verbesserung</strong></p>
-                            </div>
-                            <div>
-                                <img src={PlaceholderImage} alt="Immobilienplattform"/>
-                                <p>Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen.</p>
-                                <p className="titel"><strong>Immobilienplattform</strong></p>
-                                <div className="link-container">
-                                    <a className="github-link" href="https://github.com/JasonBichsel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                    <i> | </i>
-                                    <a className="github-link" href="https://jasonbichsel.github.io/" target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
-                                </div>
-                                <p className="titel"><strong>Status: Entwicklung</strong></p>
-                            </div>
+                        <div className="tab-buttons">
+                            <button onClick={() => setActiveTab("main")} className={activeTab === "main" ? "active" : ""}>Grösstes Projekte</button>
+                            <button onClick={() => setActiveTab("other")} className={activeTab === "other" ? "active" : ""}>Weitere Projekte</button>
                         </div>
+                        <div className="project-container">
+                            {activeTab === "other" && (
+                                <>
+                                    {(showAllOther ? otherProjects : otherProjects.slice(0, 4)).map((proj, idx) => (
+                                        <div key={idx}>
+                                            <img src={proj.img} alt={proj.alt}/>
+                                            <p>{proj.desc}</p>
+                                            <p className="titel"><strong>{proj.title}</strong></p>
+                                            <div className="link-container">
+                                                <a className="github-link" href={proj.github} target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                                <i> | </i>
+                                                <a className="github-link" href={proj.live} target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
+                                            </div>
+                                            <p className="titel"><strong>Status: {proj.status}</strong></p>
+                                        </div>
+                                    ))}
+                                </>
+                            )}
+                            {activeTab === "main" && (
+                                <>
+                                    {(showAllMain ? mainProjects : mainProjects.slice(0, 2)).map((proj, idx) => (
+                                        <div key={idx}>
+                                            <img src={proj.img} alt={proj.alt}/>
+                                            <p>{proj.desc}</p>
+                                            <p className="titel"><strong>{proj.title}</strong></p>
+                                            <div className="link-container">
+                                                <a className="github-link" href={proj.github} target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                                                <i> | </i>
+                                                <a className="github-link" href={proj.live} target="_blank" rel="noopener noreferrer"><i className="fas fa-external-link-alt"></i></a>
+                                            </div>
+                                            <p className="titel"><strong>Status: {proj.status}</strong></p>
+                                        </div>
+                                    ))}
+                                </>
+                            )}
+                        </div>
+                        {activeTab === "other" && otherProjects.length > 4 && (
+                            <button
+                                className="view-more-btn small"
+                                onClick={() => setShowAllOther(!showAllOther)}
+                            >
+                                {showAllOther ? "Weniger anzeigen" : "View More"}
+                            </button>
+                        )}
+                        {activeTab === "main" && mainProjects.length > 2 && (
+                            <button
+                                className="view-more-btn small"
+                                onClick={() => setShowAllMain(!showAllMain)}
+                            >
+                                {showAllMain ? "Weniger anzeigen" : "View More"}
+                            </button>
+                        )}
                     </div>
                 </div>
             </main>
