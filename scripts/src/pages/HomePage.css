@@ -415,3 +415,131 @@ body, html {
 .Zeugnis button:hover {
     background-color: #555;
 }
+@media (max-width: 600px) {
+  html, body {
+    font-size: 18px;
+  }
+  .navigation-bar {
+    padding: 10px 0;
+  }
+  .navigation-bar ul {
+    flex-direction: row; /* Bleibt horizontal */
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+  .navigation-bar li a {
+    padding: 12px 8px;
+    font-size: 1.08em;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
+  header {
+    padding-top: 70px;
+  }
+  #header-container h1 {
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
+  }
+  .content-section {
+    padding: 16px 6px;
+    max-width: 100vw;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 1.05em;
+  }
+  .main-container {
+    padding: 8px;
+  }
+  #it-skills li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px;
+    font-size: 1.05em;
+  }
+  .skill-name, .skill-rating, .skill-stars {
+    text-align: left;
+    flex: unset;
+    width: 100%;
+  }
+  .table-container {
+    max-width: 100vw;
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 0;
+  }
+  .table-container th, .table-container td {
+    padding: 10px 6px;
+    font-size: 1em;
+  }
+  #projects {
+    padding: 18px 4px;
+    margin-top: 18px;
+    border-radius: 10px;
+  }
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0;
+  }
+  .project-container > div {
+    padding: 14px 8px;
+    border-radius: 10px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    font-size: 1em;
+  }
+  .project-container img {
+    height: 120px;
+    border-radius: 8px;
+  }
+  .tab-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .tab-buttons button {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 16px 10px;
+    border-radius: 12px;
+  }
+  .about-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  footer {
+    padding: 18px 4px;
+    font-size: 1em;
+  }
+  #details {
+    flex-direction: column;
+    gap: 12px;
+  }
+  #details div {
+    padding: 12px 6px;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+
+
+  #details {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  #details div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 10px;
+    border-radius: 12px;
+    font-size: 1.08em;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: left;
+  }
+}
