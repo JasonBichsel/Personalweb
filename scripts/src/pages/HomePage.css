@@ -435,8 +435,9 @@ body, html {
     letter-spacing: 0.5px;
   }
   header {
-    padding-top: 70px;
+    padding-top: 76px;
   }
+  
   #header-container h1 {
     font-size: 1.4em;
     letter-spacing: 0.5px;
