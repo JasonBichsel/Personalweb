@@ -90,15 +90,20 @@ function HomePage() {
             <main>
                 <div id="main-content" className="main-container">
                     <div id="about-me" className="content-section">
-                        <h2>Über mich</h2>
-                        <p>Schon seit meiner Kindheit war es mein Ziel, Informatiker zu werden. Nun bin ich an der WISS, um meinen Berufswunsch zu verwirklichen.</p> 
-                        <p>Mein Interesse an der Informatik wurde vor allem durch das Gaming geweckt. Gleichzeitig habe ich den Drang, zu verstehen, wie bestimmte Technologien funktionieren und entwickelt werden.</p> 
-                        <p>Zu meinen Stärken zählen insbesondere mein Zeitmanagement und mein analytisches Problemlösungsvermögen. Diese Fähigkeiten helfen mir, komplexe Herausforderungen strukturiert anzugehen.</p> 
-                        <p>In der Teamarbeit lege ich großen Wert auf ein respektvolles und produktives Arbeitsumfeld, das von offenen Gesprächen und gegenseitiger Unterstützung lebt.</p> 
-                        <p>Ich bin überzeugt, dass ich mit meinen Kompetenzen aktiv zu einer erfolgreichen Zusammenarbeit beitragen kann.</p> 
-                        
-                        <h2>Interessen</h2> 
-                        <p>Computer zusammenbauen, Webseiten erstellen, Gaming und Polizeiserien.</p>
+                        <div className="about-header-row">
+                            <h2>Über mich</h2>
+                            <a className="Lebenslauf" href="/pdf/Lebenslauf-Jason-Bichsel.pdf" download>
+                                <button>Lebenslauf herunterladen</button>
+                            </a>
+                        </div>
+                        <p>Schon seit meiner Kindheit war es mein Ziel, Informatiker zu werden. Nun bin ich an der WISS, um meinen Berufswunsch zu verwirklichen.</p>
+                        <p>Mein Interesse an der Informatik wurde schon früh geweckt, durch mein Drang zu verstehen, wie Technologien funktionieren und entwickelt werden.</p>
+                        <p>Zu meinen Stärken zählen insbesondere mein Zeitmanagement und mein analytisches Problemlösungsvermögen. Diese Fähigkeiten helfen mir, komplexe Herausforderungen strukturiert anzugehen.</p>
+                        <p>In der Teamarbeit lege ich grossen Wert auf ein respektvolles und produktives Arbeitsumfeld, das von offenen Gesprächen und gegenseitiger Unterstützung lebt.</p>
+                        <p>Ich bin überzeugt, dass ich mit meinen Kompetenzen aktiv zu einer erfolgreichen Zusammenarbeit beitragen kann.</p>
+
+                        <h2>Interessen</h2>
+                        <p>Computer zusammenbauen, Webseiten erstellen, Strategiespiele und Polizeiserien.</p>
                     </div>
                     <div id="it-skills" className="content-section">
                         <h2>IT-Skills</h2>
@@ -146,7 +151,12 @@ function HomePage() {
                         </ul>
                     </div>
                     <div id="education-timeline" className="content-section">
+                        <div className="about-header-row">
                         <h2>Ausbildung</h2>
+                        <a className="Zeugnis" href="/pdf/Zwischenzeugnis.pdf" download>
+                            <button>Zeugnis herunterladen</button>
+                        </a>
+                        </div>
                         <table id="education-table" className="table-container">
                             <thead>
                                 <tr className="education-header">
@@ -167,7 +177,7 @@ function HomePage() {
                                 </tr>
                                 <tr>
                                     <th><p>Endedatum: </p></th>
-                                    <th><p>laufend</p></th>
+                                    <th><p>August 2027(im Prozzes)</p></th>
                                 </tr>
                             </thead>
                         </table>
@@ -267,7 +277,7 @@ function HomePage() {
                                 className="view-more-btn small"
                                 onClick={() => setShowAllOther(!showAllOther)}
                             >
-                                {showAllOther ? "Weniger anzeigen" : "View More"}
+                                {showAllOther ? "Show less" : "View More"}
                             </button>
                         )}
                         {activeTab === "main" && mainProjects.length > 2 && (
@@ -275,7 +285,7 @@ function HomePage() {
                                 className="view-more-btn small"
                                 onClick={() => setShowAllMain(!showAllMain)}
                             >
-                                {showAllMain ? "Weniger anzeigen" : "View More"}
+                                {showAllMain ? "Show less" : "View More"}
                             </button>
                         )}
                     </div>

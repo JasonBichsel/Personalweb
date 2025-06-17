@@ -4,13 +4,13 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #d8cac7;
+    background-color: #bfa098;
     color: #333;
     scroll-behavior: smooth;
   }
   
   #homepage-background {
-    background-color: #d8cac7;
+    background-color: #bfa098;
   }
   
   .navigation-bar {
@@ -379,4 +379,39 @@ body, html {
 .view-more-btn:hover {
     background: #555;
     color: #fff;
+}
+.about-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.Lebenslauf button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.Lebenslauf button:hover {
+    background-color: #555;
+}
+.Zeugnis button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.Zeugnis button:hover {
+    background-color: #555;
 }
