@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Link } from "react-router-dom";
 
 function HomePage() {
-    const [activeTab, setActiveTab] = useState("main");
+    const [activeTab, setActiveTab] = useState("S4");
     
     return (
         <div id="homepage-backgrund">
