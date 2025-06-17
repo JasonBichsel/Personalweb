@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./HomePage.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Link } from "react-router-dom";
 import PlaceholderImage from './img/Placeholderjpg.jpg';
 import TicTacToe from './img/Tic-Tac-Toe.jpg';
 import Notepad from './img/Notepad.jpg';
@@ -152,10 +153,10 @@ function HomePage() {
                     </div>
                     <div id="education-timeline" className="content-section">
                         <div className="about-header-row">
-                        <h2>Ausbildung</h2>
-                        <a className="Zeugnis" href="/pdf/Zwischenzeugnis.pdf" download>
-                            <button>Zeugnis herunterladen</button>
-                        </a>
+                            <h2>Ausbildung</h2>
+                            <Link className="Zeugnis" to="/zeugnis">
+                                <button>Zeugnis ansehen</button>
+                            </Link>
                         </div>
                         <table id="education-table" className="table-container">
                             <thead>
