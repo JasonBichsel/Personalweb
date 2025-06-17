@@ -55,7 +55,7 @@ function HomePage() {
         desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
         title: "Firmenbewerbungsplattform",
         github: "https://github.com/JasonBichsel/",
-        live: "https://company-application-platform-frontend.pages.dev/#/",
+        live: "https://firmen.jasonbichsel.com/#/",
         status: "Verbesserung"
     },
     {
@@ -295,8 +295,8 @@ function HomePage() {
             <footer id="contact-footer" className="content-section">
                 <div id="details">
                     <div>
-                        <a href="https://company-application-platform-frontend.pages.dev/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://company-application-platform-frontend.pages.dev/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
                         <a href="https://github.com/JasonBichsel"  target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
                         <a href="https://www.linkedin.com/in/jason-bichsel/"  target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
                     </div>
