@@ -177,8 +177,8 @@ function HomePage() {
                                     <th><p>August 2023</p></th>
                                 </tr>
                                 <tr>
-                                    <th><p>Endedatum: </p></th>
-                                    <th><p>August 2027(im Prozzes)</p></th>
+                                    <th><p>Enddatum: </p></th>
+                                    <th><p>August 2027(im Prozess)</p></th>
                                 </tr>
                             </thead>
                         </table>
@@ -201,7 +201,7 @@ function HomePage() {
                                     <th><p>August 2020</p></th>
                                 </tr>
                                 <tr>
-                                    <th><p>Endedatum: </p></th>
+                                    <th><p>Enddatum: </p></th>
                                     <th><p>August 2023</p></th>
                                 </tr>
                             </thead>
@@ -225,7 +225,7 @@ function HomePage() {
                                     <th><p>August 2014</p></th>
                                 </tr>
                                 <tr>
-                                    <th><p>Endedatum: </p></th>
+                                    <th><p>Enddatum: </p></th>
                                     <th><p>August 2020</p></th>
                                 </tr>
                             </thead>
