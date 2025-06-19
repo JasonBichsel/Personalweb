@@ -69,9 +69,9 @@ function HomePage() {
     },
     {
         img: PlaceholderImage,
-        alt: "Käfer Clicker App",
+        alt: "Android Käfer Clicker App",
         desc: "Ein einfaches Klickspiel, bei dem die Spieler Käfer klicken müssen, um Punkte zu sammeln.",
-        title: "Käfer Clicker App",
+        title: "Android Käfer Clicker App",
         github: "https://github.com/JasonBichsel/keafer-clickergame",
         status: "Verbesserung"
     }
