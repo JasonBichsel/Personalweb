@@ -56,7 +56,7 @@ function HomePage() {
         title: "Firmenbewerbungsplattform",
         github: "https://github.com/JasonBichsel/",
         live: "https://firmen.jasonbichsel.com/#/",
-        status: "Verbesserung"
+        status: "Fertig"
     },
     {
         img: PlaceholderImage,
@@ -66,6 +66,14 @@ function HomePage() {
         github: "https://github.com/JasonBichsel/",
         live: "https://jasonbichsel.github.io/",
         status: "Entwicklung"
+    },
+    {
+        img: PlaceholderImage,
+        alt: "Käfer Clicker App",
+        desc: "Ein einfaches Klickspiel, bei dem die Spieler Käfer klicken müssen, um Punkte zu sammeln.",
+        title: "Käfer Clicker App",
+        github: "https://github.com/JasonBichsel/keafer-clickergame",
+        status: "Verbesserung"
     }
     ];
     return (
