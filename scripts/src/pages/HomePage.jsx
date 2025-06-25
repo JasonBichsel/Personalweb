@@ -8,6 +8,7 @@ import Notepad from './img/Notepad.jpg';
 import Calculator from './img/Calculator.jpg';
 import RandomNumberGame from './img/Random.Number.Game.jpg';
 import FirmenBP from './img/FirmenBP.jpg';
+import KäferClicker from './img/Käfer-Clickergame.png';
 
 function HomePage() {
     const [activeTab, setActiveTab] = useState("main");
@@ -68,7 +69,7 @@ function HomePage() {
         status: "Entwicklung"
     },
     {
-        img: PlaceholderImage,
+        img: KäferClicker,
         alt: "Android Käfer Clicker App",
         desc: "Ein einfaches Klickspiel, bei dem die Spieler Käfer klicken müssen, um Punkte zu sammeln.",
         title: "Android Käfer Clicker App",
