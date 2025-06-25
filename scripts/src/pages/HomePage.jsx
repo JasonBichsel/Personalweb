@@ -75,6 +75,14 @@ function HomePage() {
         title: "Android Käfer Clicker App",
         github: "https://github.com/JasonBichsel/keafer-clickergame",
         status: "Verbesserung"
+    },
+    {
+        img: PlaceholderImage,
+        alt: "Android Shoppinglist App",
+        desc: "Eine einfache Android App, die es ermöglicht, eine Einkaufsliste zu erstellen und zu verwalten.",
+        title: "Android Shoppinglist App",
+        github: "https://github.com/JasonBichsel/Shoppinglist",
+        status: "Verbesserung"
     }
     ];
     return (
