@@ -9,7 +9,11 @@ body, html {
     background-color: #bfa098;
     color: #333;
     scroll-behavior: smooth;
-  }
+    /* Geometrisches Pfeil-/Labyrinth-Muster, sanfter durch Opazität */
+    background-image: url("data:image/svg+xml;utf8,<svg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><path d='M0 20 L20 0 L40 20 L20 40 Z M20 0 L20 40' stroke='white' stroke-width='3' fill='none' opacity='0.13'/></svg>");
+    background-repeat: repeat;
+    background-size: 40px 40px;
+}
   
   #homepage-background {
     background-color: #bfa098;
