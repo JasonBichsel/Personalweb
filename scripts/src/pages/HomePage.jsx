@@ -9,11 +9,14 @@ import Calculator from './img/Calculator.jpg';
 import RandomNumberGame from './img/Random.Number.Game.jpg';
 import FirmenBP from './img/FirmenBP.jpg';
 import KäferClicker from './img/Käfer-Clickergame.png';
+import Profilbild from './img/Profilbild.jpg';
 
 function HomePage() {
     const [activeTab, setActiveTab] = useState("main");
     const [showAllOther, setShowAllOther] = useState(false);
     const [showAllMain, setShowAllMain] = useState(false);
+    const [navOpen, setNavOpen] = useState(false);
+    
     const otherProjects = [
         {
             img: Notepad,
@@ -88,15 +91,25 @@ function HomePage() {
     return (
         <div id="homepage-backgrund">
             <nav id="main-navigation" className="navigation-bar">
-                 <ul>
-                     <li><a href="#header-container">Willkommen</a></li>
-                     <li><a href="#about-me">Über mich</a></li>
-                     <li><a href="#it-skills">IT-Skills</a></li>
-                     <li><a href="#education-timeline">Ausbildung</a></li>
-                     <li><a href="#projects">Projekte</a></li>
-                     <li><a href="#contact-footer">Kontakt</a></li>
-                 </ul>
-             </nav>
+                <button
+                    className="burger-menu"
+                    onClick={() => setNavOpen(!navOpen)}
+                    aria-label="Menü öffnen/schließen"
+                >
+                    <span />
+                    <span />
+                    <span />
+                </button>
+                <ul className={navOpen ? "open" : ""}>
+                    <li><a href="#header-container" onClick={() => setNavOpen(false)}>Willkommen</a></li>
+                    <li><a href="#about-me" onClick={() => setNavOpen(false)}>Über mich</a></li>
+                    <li><a href="#it-skills" onClick={() => setNavOpen(false)}>IT-Skills</a></li>
+                    <li><a href="#education-timeline" onClick={() => setNavOpen(false)}>Ausbildung</a></li>
+                    <li><a href="#projects" onClick={() => setNavOpen(false)}>Projekte</a></li>
+                    <li><a href="#contact-footer" onClick={() => setNavOpen(false)}>Kontakt</a></li>
+                </ul>
+                <img src={Profilbild} alt="Profil" className="profilbild-nav" />
+            </nav>
             <header>
                 <div id="header-container" className="content-section">
                     <h1>Hallo, ich bin Jason</h1>

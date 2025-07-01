@@ -1,5 +1,7 @@
 /* HomePage.css */
-
+body {
+    padding-top: 60px; /* Platz für die feste Nav-Bar */
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -12,19 +14,22 @@ body, html {
   #homepage-background {
     background-color: #bfa098;
   }
-  
   .navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #5e5c5a;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000; /* Damit sie über allem bleibt */
+    padding: 0 0;
+    height: 60px; /* Höhe an Profilbild anpassen */
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   
   }
-  
+
   .navigation-bar ul {
     list-style: none;
     margin: 0;
@@ -543,4 +548,103 @@ body, html {
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     text-align: left;
   }
+}
+/* Profilbild in der Navigation */
+
+.profilbild-nav {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    vertical-align: middle;
+    transition: box-shadow 0.2s;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1200;
+    margin: 0;
+}
+
+.navigation-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    margin-left: 10px;
+}
+.burger-menu span {
+    display: block;
+    height: 4px;
+    width: 28px;
+    background: #fff;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+    .burger-menu {
+        display: flex;
+    }
+    .navigation-bar {
+        height: 48px; /* Höhe an das Profilbild anpassen */
+        justify-content: flex-start;
+        min-height: 48px;
+        padding: 0;
+    }
+    .navigation-bar ul {
+        display: none;
+        flex-direction: column;
+        background: #5e5c5a;
+        position: absolute;
+        top: 48px; /* gleiche Höhe wie .navigation-bar */
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 1001;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .navigation-bar ul.open {
+        display: flex;
+    }
+    .navigation-bar li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation-bar li a {
+        display: block;
+        padding: 18px 0;
+        font-size: 1.2em;
+        border-radius: 0;
+        border-bottom: 1px solid #444;
+    }
+    .profilbild-nav {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        height: 40px;
+        width: 40px;
+        transform: translateY(-50%);
+    }
 }
