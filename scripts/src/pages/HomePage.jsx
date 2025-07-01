@@ -38,6 +38,22 @@ function HomePage() {
             title: "Random Number Game",
             github: "https://github.com/JasonBichsel/Random.Number.Game",
             status: "Fertig"
+        },
+        {
+            img: KäferClicker,
+            alt: "Android Käfer Clicker App",
+            desc: "Ein einfaches Klickspiel, bei dem die Spieler Käfer klicken müssen, um Punkte zu sammeln.",
+            title: "Android Käfer Clicker App",
+            github: "https://github.com/JasonBichsel/keafer-clickergame",
+            status: "Verbesserung"
+        },
+        {
+            img: PlaceholderImage,
+            alt: "Android Shoppinglist App",
+            desc: "Eine einfache Android App, die es ermöglicht, eine Einkaufsliste zu erstellen und zu verwalten.",
+            title: "Android Shoppinglist App",
+            github: "https://github.com/JasonBichsel/Shoppinglist",
+            status: "Verbesserung"
         }
     ];
     const mainProjects = [
@@ -67,22 +83,6 @@ function HomePage() {
         github: "https://github.com/JasonBichsel/",
         live: "https://jasonbichsel.github.io/",
         status: "Entwicklung"
-    },
-    {
-        img: KäferClicker,
-        alt: "Android Käfer Clicker App",
-        desc: "Ein einfaches Klickspiel, bei dem die Spieler Käfer klicken müssen, um Punkte zu sammeln.",
-        title: "Android Käfer Clicker App",
-        github: "https://github.com/JasonBichsel/keafer-clickergame",
-        status: "Verbesserung"
-    },
-    {
-        img: PlaceholderImage,
-        alt: "Android Shoppinglist App",
-        desc: "Eine einfache Android App, die es ermöglicht, eine Einkaufsliste zu erstellen und zu verwalten.",
-        title: "Android Shoppinglist App",
-        github: "https://github.com/JasonBichsel/Shoppinglist",
-        status: "Verbesserung"
     }
     ];
     return (
