@@ -63,7 +63,7 @@ function HomePage() {
     {
         img: TicTacToe,
         alt: "Tic-Tac-Toe",
-        desc: "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspaß etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
+        desc: "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspass etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
         title: "Tic-Tac-Toe",
         github: "https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs",
         live: "https://tic-tac-toe.jasonbichsel.com",
