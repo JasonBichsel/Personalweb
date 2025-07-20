@@ -1,0 +1,7 @@
+npx create-react-app scripts
+npm install
+npm install react-router-dom
+npm install --save @fortawesome/fontawesome-free
+npm install gh-pages --save-dev
+
+https://www.youtube.com/watch?v=7wzuievFjrk
