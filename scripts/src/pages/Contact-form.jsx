@@ -40,31 +40,30 @@ function Contactform() {
                     </div>
                 </div>
             </main>
-            <footer id="contact-footer" className="content-section">
+            <footer id="contact-footer" >
                 <div id="details">
                     <div>
-                        <a href="https://firmen.jasonbichsel.com/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://firmen.jasonbichsel.com/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
-                        <a href="https://github.com/JasonBichsel"  target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/jason-bichsel/"  target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
                     </div>
-                    <div>
-                        <strong>Navigation:</strong>
-                        <p></p>
+                    <div className="navigation-footer">
+                        <strong className="navigation-title">Navigation:</strong>
                         <ul>
-                            <li><a href="#welcome-section">Willkommen</a></li>
-                            <li><a href="#about-me">Über mich</a></li>
-                            <li><a href="#it-skills">IT-Skills</a></li>
-                            <li><a href="#education-timeline">Ausbildung</a></li>
-                            <li><a href="#projects">Projekte</a></li>
-                            <li><a href="#contact-footer">Kontakt</a></li>
+                            <li><Link to="/">Welcome</Link></li>
+                            <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
+                            <li><Link to="/projects">Projecte</Link></li>
+                            <li><Link to="/Contact-form">Contact-form</Link></li>
                         </ul>
                     </div>
-                    <div>
-                        <strong>Kontaktdaten:</strong>
-                        <p>Jason Bichsel</p>
-                        <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
-                        <p>Tel: 079 913 97 48</p>
+                    <div className="contact-footer-block" >
+                        <div className="contact-inner">
+                            <strong>Kontaktdaten:</strong>
+                            <p>Jason Bichsel</p>
+                            <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
+                            <p>Tel: 079 913 97 48</p>
+                        </div>
                     </div>
                 </div>
                 <div className="social-links">
@@ -73,7 +72,7 @@ function Contactform() {
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
                     <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                    
+
                 </div>
             </footer>
         </div>

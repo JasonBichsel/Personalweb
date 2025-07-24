@@ -45,7 +45,7 @@ function Zeugnis() {
                             <button onClick={() => setActiveTab("S3")} className={activeTab === "S3" ? "active" : ""}>Semester 3</button>
                             <button onClick={() => setActiveTab("S4")} className={activeTab === "S4" ? "active" : ""}>Semester 4</button>
                         </div>
-                        <div className="project-container">
+                        <div>
                             {activeTab === "S1" && (
                                 <>
                                     <table id="semester-s1-table" className="table-container zeugnis-tabelle">
