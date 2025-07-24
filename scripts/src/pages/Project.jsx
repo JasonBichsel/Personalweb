@@ -20,7 +20,7 @@ function Project() {
     const [showAllOther, setShowAllOther] = useState(false);
     const [showAllMain, setShowAllMain] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
-    
+
     const otherProjects = [
         {
             img: Notepad,
@@ -64,60 +64,57 @@ function Project() {
         }
     ];
     const mainProjects = [
-    {
-        img: TicTacToe,
-        alt: "Tic-Tac-Toe",
-        desc: "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspass etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
-        title: "Tic-Tac-Toe",
-        github: "https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs",
-        live: "https://tic-tac-toe.jasonbichsel.com",
-        status: "Fertig"
-    },
-    {
-        img: FirmenBP,
-        alt: "Firmenbewerbungsplattform",
-        desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
-        title: "Firmenbewerbungsplattform",
-        github: "https://github.com/JasonBichsel/",
-        live: "https://firmen.jasonbichsel.com/#/",
-        status: "Fertig"
-    },
-    {
-        img: PlaceholderImage,
-        alt: "Immobilienplattform",
-        desc: "Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen.",
-        title: "Immobilienplattform",
-        github: "https://github.com/JasonBichsel/",
-        live: "https://jasonbichsel.github.io/",
-        status: "Entwicklung"
-    }
+        {
+            img: TicTacToe,
+            alt: "Tic-Tac-Toe",
+            desc: "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspass etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
+            title: "Tic-Tac-Toe",
+            github: "https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs",
+            live: "https://tic-tac-toe.jasonbichsel.com",
+            status: "Fertig"
+        },
+        {
+            img: FirmenBP,
+            alt: "Firmenbewerbungsplattform",
+            desc: "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
+            title: "Firmenbewerbungsplattform",
+            github: "https://github.com/JasonBichsel/",
+            live: "https://firmen.jasonbichsel.com/#/",
+            status: "Fertig"
+        },
+        {
+            img: PlaceholderImage,
+            alt: "Immobilienplattform",
+            desc: "Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen.",
+            title: "Immobilienplattform",
+            github: "https://github.com/JasonBichsel/",
+            live: "https://jasonbichsel.github.io/",
+            status: "Entwicklung"
+        }
     ];
     return (
         <div id="homepage-backgrund">
             <nav id="main-navigation" className="navigation-bar">
-                            <button
-                                className="burger-menu"
-                                onClick={() => setNavOpen(!navOpen)}
-                                aria-label="Menü öffnen/schließen"
-                            >
-                                <span />
-                                <span />
-                                <span />
-                            </button>
-                            <ul className={navOpen ? "open" : ""}>
-                                <li><Link to="/">Welcome</Link></li>
-                                <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
-                                <li><Link to="/projects">Projecte</Link></li>
-                                <li><Link to="/Contact-form">Contact-form</Link></li>
-                            </ul>
-                            <img src={Profilbild} alt="Profil" className="profilbild-nav" />
-                        </nav>
-            <header>
-                
-            </header>
+                <button
+                    className="burger-menu"
+                    onClick={() => setNavOpen(!navOpen)}
+                    aria-label="Menü öffnen/schließen"
+                >
+                    <span />
+                    <span />
+                    <span />
+                </button>
+                <ul className={navOpen ? "open" : ""}>
+                    <li><Link to="/">Welcome</Link></li>
+                    <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
+                    <li><Link to="/projects">Projecte</Link></li>
+                    <li><Link to="/Contact-form">Contact-form</Link></li>
+                </ul>
+                <img src={Profilbild} alt="Profil" className="profilbild-nav" />
+            </nav>
             <main>
                 <div id="main-content" className="main-container">
-                    <div id="projects"> 
+                    <div id="projects" className="content-section">
                         <h2>Projekte</h2>
                         <div className="tab-buttons">
                             <button onClick={() => setActiveTab("main")} className={activeTab === "main" ? "active" : ""}>Grösste Projekte</button>
@@ -128,7 +125,7 @@ function Project() {
                                 <>
                                     {(showAllOther ? otherProjects : otherProjects.slice(0, 2)).map((proj, idx) => (
                                         <div key={idx}>
-                                            <img src={proj.img} alt={proj.alt}/>
+                                            <img src={proj.img} alt={proj.alt} />
                                             <p>{proj.desc}</p>
                                             <p className="titel"><strong>{proj.title}</strong></p>
                                             <div className="link-container">
@@ -145,7 +142,7 @@ function Project() {
                                 <>
                                     {(showAllMain ? mainProjects : mainProjects.slice(0, 2)).map((proj, idx) => (
                                         <div key={idx}>
-                                            <img src={proj.img} alt={proj.alt}/>
+                                            <img src={proj.img} alt={proj.alt} />
                                             <p>{proj.desc}</p>
                                             <p className="titel"><strong>{proj.title}</strong></p>
                                             <div className="link-container">
@@ -176,33 +173,35 @@ function Project() {
                             </button>
                         )}
                     </div>
+                    <div>
+                        <h2 className="content-section">Referzen</h2>
+                    </div>
                 </div>
             </main>
-            <footer id="contact-footer" className="content-section">
+            <footer id="contact-footer" >
                 <div id="details">
                     <div>
-                        <a href="https://firmen.jasonbichsel.com/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://firmen.jasonbichsel.com/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
-                        <a href="https://github.com/JasonBichsel"  target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/jason-bichsel/"  target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
                     </div>
-                    <div>
-                        <strong>Navigation:</strong>
-                        <p></p>
+                    <div className="navigation-footer">
+                        <strong className="navigation-title">Navigation:</strong>
                         <ul>
-                            <li><a href="#welcome-section">Willkommen</a></li>
-                            <li><a href="#about-me">Über mich</a></li>
-                            <li><a href="#it-skills">IT-Skills</a></li>
-                            <li><a href="#education-timeline">Ausbildung</a></li>
-                            <li><a href="#projects">Projekte</a></li>
-                            <li><a href="#contact-footer">Kontakt</a></li>
+                            <li><Link to="/">Welcome</Link></li>
+                            <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
+                            <li><Link to="/projects">Projecte</Link></li>
+                            <li><Link to="/Contact-form">Contact-form</Link></li>
                         </ul>
                     </div>
-                    <div>
-                        <strong>Kontaktdaten:</strong>
-                        <p>Jason Bichsel</p>
-                        <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
-                        <p>Tel: 079 913 97 48</p>
+                    <div className="contact-footer-block" >
+                        <div className="contact-inner">
+                            <strong>Kontaktdaten:</strong>
+                            <p>Jason Bichsel</p>
+                            <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
+                            <p>Tel: 079 913 97 48</p>
+                        </div>
                     </div>
                 </div>
                 <div className="social-links">
@@ -211,7 +210,7 @@ function Project() {
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
                     <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                    
+
                 </div>
             </footer>
         </div>
