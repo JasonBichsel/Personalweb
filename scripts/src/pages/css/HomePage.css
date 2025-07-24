@@ -96,20 +96,21 @@ body, html {
     margin-bottom: clamp(8px, 2vw, 24px);
   }
   
-  .content-section {
+.content-section {
     padding: clamp(6px, 2vw, 24px) 0;
     max-width: none;
     margin: 0;
     background: transparent;
     border-radius: 0;
     box-shadow: none;
-  }
-  .main-container {
-    padding: 0;
+}
+.main-container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    min-height: 1px;
+    flex-direction: column;
+    align-items: center; /* Zentriert horizontal */
+    justify-content: center;
+    gap: 60px; /* Abstand zwischen den Bereichen */
+    padding: 60px 20px;
 }
 
 #main-content {
@@ -131,17 +132,42 @@ body, html {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 #it-skills li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 10px;
+  padding: 14px 200px; /* Mehr Platz */
   border-bottom: 1px solid #ccc;
   background-color: #fff;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  color: #000; /* Schwarzer Text */
+}
+
+#it-skills {
+  width: 100%;
+  max-width: 2300px; /* Gleiche Breite wie education table */
+  margin: 0 auto;
+}
+.content-section {
+  font-size: 1.4em; /* Größerer Fließtext */
+}
+
+.content-section h2 {
+  font-size: 2.4em; /* Größerer Titel */
+}
+
+.skill-name, .skill-rating, .skill-stars {
+  font-size: 1.2em;
+}
+
+.table-container th p,
+.table-container td p {
+  font-size: 1.5em;
 }
 
 .skill-name {
@@ -187,12 +213,16 @@ body, html {
   
   .education-header h3 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.5em;        /* Gleiche Größe wie .skill-name */
+    color: #ffffff; 
   }
-  
   .table-container p {
     margin: 0;
   }
+  .table-container {
+  margin-bottom: 60px; /* oder mehr/weniger je nach Wunsch */
+}
+
   #projects {
     background: transparent;
     padding: 10px 0;
