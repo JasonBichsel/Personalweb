@@ -1,24 +1,45 @@
+.animated-title {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #333;
+  width: 0;
+  animation: typing-title 2s steps(25, end) forwards, blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing-title {
+  from { width: 0; }
+  to { width: 18ch; } /* Passe die Zeichenanzahl an deinen Titel an */
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #333; }
+}
+
 /* HomePage.css */
 body {
-    padding-top: 60px; /* Platz für die feste Nav-Bar */
+    padding-top: 80px;
 }
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #001f3f;
-    color: #333;
+    background-color: #001133;
+    background-image: linear-gradient(to bottom, #000 0%, #001133 80%, #001133 100%);
+    color: #fff;
     scroll-behavior: smooth;
-    /* Geometrisches Pfeil-/Labyrinth-Muster, sanfter durch Opazität */
-    background-image: url("data:image/svg+xml;utf8,<svg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'><path d='M0 20 L20 0 L40 20 L20 40 Z M20 0 L20 40' stroke='white' stroke-width='3' fill='none' opacity='0.13'/></svg>");
-    background-repeat: repeat;
-    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-size: clamp(14px, 2.5vw, 28px);
+    min-height: 100vh;
 }
   
   #homepage-background {
     background-color: #001f3f;
   }
   .navigation-bar {
+    height: 100px; 
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,8 +48,6 @@ body, html {
     left: 0;
     width: 100%;
     background-color: #5e5c5a;
-    padding: 0 0;
-    height: 60px; /* Höhe an Profilbild anpassen */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
    
@@ -44,10 +63,11 @@ body, html {
   }
   
   .navigation-bar li a {
+    padding: 12px 20px; /* vorher 8px 12px – mehr Platz */
+    font-size: 1.1em;   /* etwas größere Schrift */
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 12px;
     border-radius: 5px;
     transition: background 0.3s;
   }
@@ -57,26 +77,54 @@ body, html {
   }
 
   header {
-    padding-top: 100px;
+    /* zentriert und Gradient, Canvas wird per Inline-Style gesetzt */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: none; /* Gradient kommt aus Inline-Style */
   }
   
   #header-container h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: clamp(1.5em, 5vw, 3.5em);
+    margin-bottom: clamp(8px, 2vw, 24px);
   }
   
   .content-section {
-    padding: 30px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #f5efec;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: clamp(6px, 2vw, 24px) 0;
+    max-width: none;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
   }
   .main-container {
-  padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 1px;
+}
+
+#main-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Text am unteren Rand ausrichten */
+    min-height: 350px; /* Passe ggf. an, damit der Text auf Button-Höhe ist */
+}
+
+/* Optional: Passe die Höhe für größere Bildschirme an */
+@media (min-width: 900px) {
+    #main-content {
+        min-height: 420px;
+    }
 }
 
 #it-skills ul {
@@ -115,23 +163,22 @@ body, html {
 }
 .table-container {
     width: 100%;
-    max-width: 900px;
-    margin: 20px auto;
+    max-width: none;
+    margin: 0;
     border-collapse: collapse;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    table-layout: fixed; /* <- Macht alle Zellen gleich breit */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
   
   .table-container th, 
   .table-container td {
-    text-align: left;
-    padding: 12px 16px;
-    width: 50%; /* Jede Spalte nimmt 50% ein */
+    padding: 8px 4px;
+    width: 50%;
     box-sizing: border-box;
+    background: transparent;
   }
   
   .table-container thead tr {
@@ -147,11 +194,11 @@ body, html {
     margin: 0;
   }
   #projects {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-top: 40px;
+    background: transparent;
+    padding: 10px 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 10px;
   }
   
   #projects .project-container {
@@ -161,19 +208,14 @@ body, html {
   }
   
   .project-container > div {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    min-width: 0;                /* verhindert Überbreite */
-    overflow-wrap: break-word;   /* erzwingt Zeilenumbruch */
-    word-break: break-word;
-    max-width: 100%;             /* bleibt im Grid-Bereich */
-    width: 527px;                 /* füllt Spalte aus, aber nicht mehr */
+    background: transparent;
+    padding: 8px 2px;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(1em, 2vw, 1.5em);
   }
   
   .project-container a {
@@ -199,19 +241,16 @@ body, html {
   
   .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding: 0;
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
   }
   
   .project-container img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 12px;
+    border-radius: 0;
   }
   
   .project-container {
@@ -223,6 +262,7 @@ body, html {
     box-sizing: border-box;
     justify-content: center;
   }
+
   ul {
     list-style-type: none; /* Entfernt die Aufzählungszeichen */
     padding: 0; /* Entfernt zusätzliches Padding */
@@ -231,6 +271,7 @@ body, html {
   ul li {
     margin-bottom: 8px; /* Abstand zwischen den Listenelementen */
   }
+
   .link-container {
     display: flex;
     align-items: center;
@@ -243,42 +284,27 @@ body, html {
     color: inherit;
     font-size: 1.2em;
   }
+
   .titel {
     text-align: center; /* Zentriert den Text horizontal */
     margin: 20px 0; /* Fügt oben und unten Abstand hinzu */
   }
-  footer {
-    background-color: #5e5c5a;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-  }
   
-  footer a {
-    color: white;
-    text-decoration: none;
+  .contact-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
   }
   
   footer a:hover {
     text-decoration: underline;
   }
   
-  footer button {
-    margin: 10px;
-    padding: 10px 15px;
-    border: none;
-    background-color: #333;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  footer button:hover {
-    background-color: #222;
-  }
   #details {
     display: flex;
+    background-color: #555;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
@@ -288,12 +314,11 @@ body, html {
   }
   
   #details div {
-    background-color: #fff;
     padding: 16px;
     border-radius: 8px;
-    flex: 1 1 250px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    flex:250px;
     color: #000;
+    text-align: center; /* Text zentrieren */
     text-align: left; /* Text links ausrichten */
   }
   
@@ -302,44 +327,11 @@ body, html {
     text-decoration: none;
     font-weight: bold;
   }
-  
-  
+
   #details a:hover {
     text-decoration: underline;
   }
-  .social-links {
-    display: flex;
-    align-items: center; /* Vertikal zentrieren */
-    justify-content: center; /* Horizontal zentrieren */
-    gap: 10px; /* Abstand zwischen den Elementen */
-    padding: 10px; /* Innenabstand */
-    border-radius: 8px; /* Abgerundete Ecken */
-    margin: 20px 0; /* Abstand zum Rest der Seite */
-  }
   
-  .linkedin-link, .github-link {
-    font-size: 24px; /* Größe der Icons */
-    color: #0077b5; /* LinkedIn Farbe */
-    transition: color 0.3s ease;
-  }
-  
-  .github-link {
-    color: #333; /* GitHub Farbe */
-  }
-  
-  .linkedin-link:hover, .github-link:hover {
-    color: #555; /* Hover-Effekt für beide Links */
-  }
-  
-  .linkedin-name {
-    font-size: 16px; /* Größe des Namens */
-    margin: 0; /* Entfernt den Standardabstand */
-    color: #333; /* Textfarbe */
-  }
-  
-  .social-links a {
-    text-decoration: none; /* Entfernt Unterstreichung */
-  }
   .tab-buttons {
     display: flex;
     gap: 12px;
@@ -358,6 +350,41 @@ body, html {
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
     box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; /* mehr Abstand */
+    padding: 20px;
+    border-radius: 12px;
+    margin: 30px 0;
+    font-size: 1.4em; /* größerer Text */
+    color: #000; /* schwarzer Text */
+}
+.linkedin-name {
+    text-decoration: none;
+    color: #ffffff; /* Text in Schwarz */
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.1em;
+}
+/* LinkedIn bleibt blau */
+.linkedin-link {
+    color: #0077b5;
+}
+
+/* GitHub bleibt dunkel */
+.github-link {
+    color: #333;
+}
+
+/* Optional: Hover-Effekt */
+.linkedin-link:hover,
+.github-link:hover {
+    color: #555;
 }
 
 .tab-buttons button.active,
@@ -396,181 +423,199 @@ body, html {
     gap: 16px;
 }
 
-.Lebenslauf button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
 
-.Lebenslauf button:hover {
-    background-color: #555;
-}
-.Zeugnis button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
 
-.Zeugnis button:hover {
-    background-color: #555;
-}
-@media (max-width: 600px) {
-  html, body {
-    font-size: 18px;
-  }
-  .navigation-bar {
-    padding: 10px 0;
-  }
-  .navigation-bar ul {
-    flex-direction: row; /* Bleibt horizontal */
-    gap: 12px;
-    justify-content: center;
-    width: 100%;
-  }
-  .navigation-bar li a {
-    padding: 12px 8px;
-    font-size: 1.08em;
-    border-radius: 8px;
-    letter-spacing: 0.5px;
-  }
-  header {
-    padding-top: 76px;
-  }
-  
-  #header-container h1 {
-    font-size: 1.4em;
-    letter-spacing: 0.5px;
-  }
-  .content-section {
-    padding: 16px 6px;
-    max-width: 100vw;
-    border-radius: 10px;
-    margin-bottom: 18px;
-    font-size: 1.05em;
-  }
-  .main-container {
-    padding: 8px;
-  }
-  #it-skills li {
+
+
+
+footer #details > div {
+    color: white;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 8px;
-    font-size: 1.05em;
-  }
-  .skill-name, .skill-rating, .skill-stars {
-    text-align: left;
-    flex: unset;
-    width: 100%;
-  }
-  .table-container {
-    max-width: 100vw;
-    font-size: 1em;
-    border-radius: 8px;
-    padding: 0;
-  }
-  .table-container th, .table-container td {
-    padding: 10px 6px;
-    font-size: 1em;
-  }
-  #projects {
-    padding: 18px 4px;
-    margin-top: 18px;
-    border-radius: 10px;
-  }
-  .project-container {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 0;
-  }
-  .project-container > div {
-    padding: 14px 8px;
-    border-radius: 10px;
-    width: 100%;
-    min-width: 0;
-    max-width: 100vw;
-    font-size: 1em;
-  }
-  .project-container img {
-    height: 120px;
-    border-radius: 8px;
-  }
-  .tab-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  .tab-buttons button {
-    width: 100%;
-    font-size: 1.1em;
-    padding: 16px 10px;
-    border-radius: 12px;
-  }
-  .about-header-row {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: left;
     gap: 10px;
-  }
-  footer {
-    padding: 18px 4px;
-    font-size: 1em;
-  }
-  #details {
-    flex-direction: column;
-    gap: 12px;
-  }
-  #details div {
-    padding: 12px 6px;
-    border-radius: 8px;
-    font-size: 1em;
-  }
-
-
-  #details {
-    flex-direction: column;
-    gap: 16px;
-    align-items: stretch;
-  }
-  #details div {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 18px 10px;
-    border-radius: 12px;
-    font-size: 1.08em;
-    margin: 0;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    text-align: left;
-  }
+    
 }
+#navigation-links {
+    align-items: center;
+}
+footer #details > div > a {
+    color: white;
+    display: block;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer button
+{
+    background: #000 !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 6px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: block;
+}
+.contact-footer-block {
+  display: flex;
+  justify-content: center;     /* Inhalt horizontal zentrieren */
+  align-items: center;         /* Inhalt vertikal zentrieren (optional) */
+  padding: 16px;
+  font-size: 1.3em;
+  border-radius: 8px;
+  flex: 250px;                 /* Größe bleibt wie bei anderen Blöcken */
+  box-sizing: border-box;
+}
+
+.contact-inner {
+  text-align: left;            /* Text bleibt links */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;                    /* kleiner Abstand zwischen Zeilen */
+}
+
+.contact-footer-block strong {
+  font-weight: 700;   /* fetter */
+  color: white;       /* weiß */
+  font-size: 1.4em;
+  margin-bottom: 4px;
+}
+
+.contact-footer-block p {
+  font-weight: 700;   /* etwas fetter */
+  margin-bottom: 6px;
+  margin: 2px 0;
+}
+
+
+.navigation-title {
+  font-size: 1.4em;
+  margin-bottom: 4px; /* oder 0 */
+}
+
+.content-section {
+  color: white;               /* Weißer Text */
+  font-size: 1.2em;           /* Größerer Text */
+  text-align: left;           /* Linksbündig */
+  padding: 100px;              /* Mehr Abstand vom Rand */
+  box-sizing: border-box;
+}
+
+.content-section h2 {
+  font-weight: 800;           /* Fetterer Titel */
+  font-size: 2em;             /* Optional: noch größerer Titel */
+  margin-bottom: 12px;
+}
+
+.content-section p {
+  margin-bottom: 12px;        /* Abstand zwischen Absätzen */
+  line-height: 1.6;           /* Bessere Lesbarkeit */
+  font-weight: 500;           /* Etwas fetterer Text */
+}
+
+#details .navigation-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-size: 1.3em;
+  padding: 16px;
+  flex: 250px; /* wie die anderen divs in #details */
+  box-sizing: border-box;
+}
+
+.navigation-footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navigation-footer li {
+  margin-bottom: 6px;
+}
+
+.navigation-footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation-footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Animierter "Programmierung"-Hintergrund für Header */
+.header-bg-animation {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.header-bg-animation .line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00c3ff 0%, #ffff1c 100%);
+    opacity: 0.18;
+    animation: moveLine 4s linear infinite;
+}
+
+.header-bg-animation .line:nth-child(2) {
+    top: 20%;
+    animation-delay: 1s;
+    opacity: 0.13;
+}
+.header-bg-animation .line:nth-child(3) {
+    top: 40%;
+    animation-delay: 2s;
+    opacity: 0.16;
+}
+.header-bg-animation .line:nth-child(4) {
+    top: 60%;
+    animation-delay: 0.5s;
+    opacity: 0.11;
+}
+.header-bg-animation .line:nth-child(5) {
+    top: 80%;
+    animation-delay: 1.5s;
+    opacity: 0.14;
+}
+
+@keyframes moveLine {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(100vw); }
+}
+
 /* Profilbild in der Navigation */
 
 .profilbild-nav {
-    height: 44px;
-    width: 44px;
+    height: 72px;              /* etwas kleiner als Navbar-Höhe (100px) */
+    width: 72px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
     background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    vertical-align: middle;
-    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1200;
-    margin: 0;
+    right: 50px;  
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1200; 
 }
 
 .navigation-bar ul {
@@ -603,52 +648,21 @@ body, html {
     border-radius: 2px;
     transition: 0.3s;
 }
+.Lebenslauf button,
+.Zeugnis button {
+    background: linear-gradient(135deg, #ffffff, #0134ff);
+    color: rgb(0, 0, 0);
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
-@media (max-width: 800px) {
-    .burger-menu {
-        display: flex;
-    }
-    .navigation-bar {
-        height: 48px; /* Höhe an das Profilbild anpassen */
-        justify-content: flex-start;
-        min-height: 48px;
-        padding: 0;
-    }
-    .navigation-bar ul {
-        display: none;
-        flex-direction: column;
-        background: #5e5c5a;
-        position: absolute;
-        top: 48px; /* gleiche Höhe wie .navigation-bar */
-        left: 0;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        z-index: 1001;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .navigation-bar ul.open {
-        display: flex;
-    }
-    .navigation-bar li {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    .navigation-bar li a {
-        display: block;
-        padding: 18px 0;
-        font-size: 1.2em;
-        border-radius: 0;
-        border-bottom: 1px solid #444;
-    }
-    .profilbild-nav {
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        height: 40px;
-        width: 40px;
-        transform: translateY(-50%);
-    }
+.Lebenslauf button:hover, .Zeugnis button:hover {
+    background: linear-gradient(135deg, #005f8d, #009e7f);
+    transform: translateY(-2px);
 }
