@@ -696,3 +696,30 @@ footer button
     background: linear-gradient(135deg, #005f8d, #009e7f);
     transform: translateY(-2px);
 }
+.zeugnis-tabelle {
+  width: 95%;
+  max-width: none; /* Kein Limit auf großen Bildschirmen */
+  border-collapse: collapse;
+  margin: 30px auto;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  table-layout: auto; /* Spaltenbreite hängt vom Inhalt ab */
+  white-space: nowrap; /* Verhindert Umbrüche */
+}
+
+.zeugnis-tabelle th, .zeugnis-tabelle td {
+  padding: 14px 24px;
+  border: 1px solid #ccc;
+  text-align: left;
+  white-space: nowrap; /* Kein Zeilenumbruch */
+}
+
+.zeugnis-tabelle p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.zeugnis-header {
+  margin-top: 60px; /* oder 80px, je nach Wunsch */
+}
+
