@@ -81,7 +81,7 @@ function Apprenticeship() {
                     <div id="education-timeline" className="content-section">
                         <div className="about-header-row">
                             <h2>Ausbildung</h2>
-                            <Link className="Zeugnis" to="/zeugnis">
+                            <Link className="Zeugnis" to="/Certificate">
                                 <button>Zeugnis ansehen</button>
                             </Link>
                         </div>
