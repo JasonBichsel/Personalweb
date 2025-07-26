@@ -8,8 +8,6 @@ import "./css/HomePage.css";
 //Imgs
 import Profile_picture from "./imgs/Profilbild.jpg";
 
-
-
 function HomePage() {
     const [navOpen, setNavOpen] = useState(false);
     const canvasRef = useRef(null);
@@ -68,12 +66,12 @@ function HomePage() {
 
     return (
         <div id="homepage-backgrund" style={{ color: "#fff" }}>
-           <nav id="main-navigation" className="navigation-bar">
+            <nav id="main-navigation" className="navigation-bar">
                 <button
                     className="burger-menu"
                     onClick={() => setNavOpen(!navOpen)}
                     aria-label="Menü öffnen/schließen"
-                    >
+                >
                     <span />
                     <span />
                     <span />
@@ -86,46 +84,9 @@ function HomePage() {
                 </ul>
                 <img src={Profile_picture} alt="Profil" className="profilbild-nav" />
             </nav>
-            <header
-                style={{
-                    position: "relative",
-                    overflow: "hidden",
-                    background: "linear-gradient(to bottom, #000 0%, #001133 80%, #001133 100%)",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100vh",
-                    minHeight: "100vh"
-                }}
-            >
-                <canvas
-                    ref={canvasRef}
-                    style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        zIndex: 0,
-                        pointerEvents: "none"
-                    }}
-                />
-                <div
-                    id="header-container"
-                    className="content-section"
-                    style={{
-                        position: "relative",
-                        zIndex: 1,
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        textAlign: "center",
-                        color: "#fff" // Schrift im Header weiß
-                    }}
-                >
+            <header id="header">
+                <canvas ref={canvasRef} id="canvas" />
+                <div id="header-container" className="content-section">
                     <h1 className="animated-title" style={{ fontSize: "clamp(2.5em, 8vw, 5em)", color: "#fff" }}>Hallo, ich bin Jason.</h1>
                     <div id="welcome-section" className="animated-welcome">
                         <p>Ich bin 17 Jahre alt und Auszubildender als Informatiker in der Fachrichtung Applikationsentwicklung.</p>
@@ -155,19 +116,21 @@ function HomePage() {
             <footer id="contact-footer" >
                 <div id="details">
                     <div>
-                        <a href="https://firmen.jasonbichsel.com/#/register"  target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://firmen.jasonbichsel.com/#/firmen-list"  target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
-                        <a href="https://github.com/JasonBichsel"  target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/jason-bichsel/"  target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
+                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
                     </div>
                     <div className="navigation-footer">
-                        <strong className="navigation-title">Navigation:</strong>
-                        <ul>
-                            <li><Link to="/">Welcome</Link></li>
-                            <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
-                            <li><Link to="/projects">Projecte</Link></li>
-                            <li><Link to="/Contact-form">Contact-form</Link></li>
-                        </ul>
+                        <div className="navigation-footer2">
+                            <strong className="navigation-title">Navigation:</strong>
+                            <ul>
+                                <li><Link to="/">Welcome</Link></li>
+                                <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
+                                <li><Link to="/projects">Projecte</Link></li>
+                                <li><Link to="/Contact-form">Contact-form</Link></li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="contact-footer-block" >
                         <div className="contact-inner">
@@ -184,10 +147,10 @@ function HomePage() {
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
                     <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                    
                 </div>
             </footer>
         </div>
     );
+
 }
 export default HomePage;

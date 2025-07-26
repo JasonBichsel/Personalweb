@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Link } from "react-router-dom";
+
 
 //CSS
 import "./css/HomePage.css";
@@ -20,6 +21,14 @@ function Project() {
     const [showAllOther, setShowAllOther] = useState(false);
     const [showAllMain, setShowAllMain] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
+
+    const containerRef = useRef(null);
+
+    // Variablen für Drag-Scroll
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
 
     const otherProjects = [
         {
@@ -92,6 +101,99 @@ function Project() {
             status: "Entwicklung"
         }
     ];
+
+
+    const referenceData = [
+        {
+            img: Profilbild,
+            title: "Ein Schulfreund",
+            text: "Kreativ und zuverlässig – gerne wieder.",
+            stars: 4.5,
+            github: "https://github.com/beispielperson",
+            website: "https://beispielseite.com"
+        },
+        {
+            img: Profilbild,
+            text: "Kreativ und zuverlässig – gerne wieder.",
+            stars: 4.5
+        },
+        {
+            img: FirmenBP,
+            text: "Hat unsere Anforderungen schnell umgesetzt.",
+            stars: 5
+        },
+        {
+            img: TicTacToe,
+            text: "Einfach, aber sehr gut programmiert!",
+            stars: 4.5
+        },
+        {
+            img: TicTacToe,
+            text: "Einfach, aber sehr gut programmiert!",
+            stars: 4.5
+        }
+    ];
+
+    // Dupliziere Referenzen für Endlosschleife
+    const allRefs = [...referenceData, ...referenceData];
+
+    // Scroll Funktion (für Buttons)
+    const scroll = (direction) => {
+        const container = containerRef.current;
+        const scrollAmount = 300;
+        if (!container) return;
+        container.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    };
+
+    // Drag Scroll Logik
+    const handleMouseDown = (e) => {
+        isDown = true;
+        containerRef.current.classList.add('active');
+        startX = e.pageX - containerRef.current.offsetLeft;
+        scrollLeft = containerRef.current.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+        isDown = false;
+        containerRef.current.classList.remove('active');
+    };
+
+    const handleMouseUp = () => {
+        isDown = false;
+        containerRef.current.classList.remove('active');
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - containerRef.current.offsetLeft;
+        const walk = (x - startX) * 2;
+        containerRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    // useEffect für Auto-Scroll und Endlosschleife
+    useEffect(() => {
+        const container = containerRef.current;
+
+        const handleScroll = () => {
+            const maxScrollLeft = container.scrollWidth - container.clientWidth;
+            if (container.scrollLeft >= maxScrollLeft - 1) {
+                container.scrollLeft = 0;
+            }
+        };
+
+        const scrollInterval = setInterval(() => {
+            container.scrollBy({ left: 1, behavior: "smooth" });
+        }, 30); // optional: automatisch scrollen
+
+        container.addEventListener("scroll", handleScroll);
+        return () => {
+            container.removeEventListener("scroll", handleScroll);
+            clearInterval(scrollInterval);
+        };
+    }, []);
+
+
     return (
         <div id="homepage-backgrund">
             <nav id="main-navigation" className="navigation-bar">
@@ -173,8 +275,60 @@ function Project() {
                             </button>
                         )}
                     </div>
-                    <div>
-                        <h2 className="content-section">Referzen</h2>
+                    <div className="reference-section">
+                        <div className="content-section">
+                            <h2>Referenzen</h2>
+                        </div>
+
+                        <div className="reference-carousel-wrapper">
+                            <button className="scroll-btn left" onClick={() => scroll('left')}>&lt;</button>
+
+                            <div
+                                className="reference-carousel"
+                                ref={containerRef}
+                                onMouseDown={handleMouseDown}
+                                onMouseLeave={handleMouseLeave}
+                                onMouseUp={handleMouseUp}
+                                onMouseMove={handleMouseMove}
+                            >
+                                {allRefs.map((ref, index) => (
+
+                                    <div className="reference-card" key={index}>
+                                        <img src={ref.img} alt={`Referenz ${index + 1}`} />
+
+                                        {ref.title && <p className="reference-title"><strong>{ref.title}</strong></p>}
+
+                                        <p>{ref.text}</p>
+
+                                        <div className="stars">
+                                            {Array.from({ length: 5 }).map((_, i) => (
+                                                <span key={i}>{i < ref.stars ? '★' : '☆'}</span>
+                                            ))}
+                                        </div>
+
+                                        <div className="reference-links">
+                                            {ref.linkedin && (
+                                                <a href={ref.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link" title="LinkedIn Profil ansehen">
+                                                    <i className="fab fa-linkedin"></i>
+                                                </a>
+                                            )}
+                                            {ref.github && (
+                                                <a href={ref.github} target="_blank" rel="noopener noreferrer" className="github-link" title="GitHub Profil ansehen">
+                                                    <i className="fab fa-github"></i>
+                                                </a>
+                                            )}
+                                            {ref.website && (
+                                                <a href={ref.website} target="_blank" rel="noopener noreferrer" className="website-link" title="Website besuchen">
+                                                    <i className="fas fa-globe"></i>
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <button className="scroll-btn right" onClick={() => scroll('right')}>&gt;</button>
+                        </div>
                     </div>
                 </div>
             </main>
