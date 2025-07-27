@@ -9,7 +9,7 @@ import Profile_picture from "./imgs/Profilbild.jpg";
 
 function Contactform() {
     const [navOpen, setNavOpen] = useState(false);
-    
+
     return (
         <div id="homepage-backgrund">
             <nav id="main-navigation" className="navigation-bar">
@@ -17,7 +17,7 @@ function Contactform() {
                     className="burger-menu"
                     onClick={() => setNavOpen(!navOpen)}
                     aria-label="Menü öffnen/schließen"
-                    >
+                >
                     <span />
                     <span />
                     <span />
@@ -30,13 +30,24 @@ function Contactform() {
                 </ul>
                 <img src={Profile_picture} alt="Profil" className="profilbild-nav" />
             </nav>
-            <header>
-            </header>
             <main>
                 <div id="main-content" className="main-container">
-                    <div id = "Contact-form" className="content-section">
+                    <div id="Contact-form" className="content-section">
+                        <h2>Kontaktformular</h2>
+                        <form action="https://formsubmit.co/Bichsel6343@outlook.com" method="POST">
+                            <input type="hidden" name="_captcha" value="false" />
 
+                            <label htmlFor="name">Name:</label><br />
+                            <input type="text" id="name" name="name" required /><br /><br />
 
+                            <label htmlFor="email">E-Mail:</label><br />
+                            <input type="email" id="email" name="email" required /><br /><br />
+
+                            <label htmlFor="message">Nachricht:</label><br />
+                            <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+                            <button type="submit">Senden</button>
+                        </form>
                     </div>
                 </div>
             </main>

@@ -23,6 +23,7 @@ function Project() {
     const [navOpen, setNavOpen] = useState(false);
 
     const containerRef = useRef(null);
+    
 
     // Variablen für Drag-Scroll
     let isDown = false;
@@ -206,7 +207,7 @@ function Project() {
                     <span />
                     <span />
                 </button>
-                <ul className={navOpen ? "open" : ""}>
+                <ul className={navOpen ? "mobile-open" : ""}>
                     <li><Link to="/">Welcome</Link></li>
                     <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
                     <li><Link to="/projects">Projecte</Link></li>
