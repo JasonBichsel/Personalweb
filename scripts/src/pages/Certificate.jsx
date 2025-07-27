@@ -25,7 +25,7 @@ function Zeugnis() {
                     <span />
                     <span />
                 </button>
-                <ul className={navOpen ? "open" : ""}>
+                <ul className={navOpen ? "mobile-open" : ""}>
                     <li><Link to="/">Welcome</Link></li>
                     <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
                     <li><Link to="/projects">Projecte</Link></li>
