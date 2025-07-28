@@ -23,7 +23,7 @@ function Project() {
     const [navOpen, setNavOpen] = useState(false);
 
     const containerRef = useRef(null);
-    
+
 
     // Variablen für Drag-Scroll
     let isDown = false;

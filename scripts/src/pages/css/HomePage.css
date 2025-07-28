@@ -33,10 +33,6 @@ body, html {
     font-size: clamp(12px, 2vw, 18px); /* Kleinere Grundschrift */
     min-height: 100vh;
 }
-  
-#homepage-background {
-    background-color: #001f3f;
-}
 
 .navigation-bar {
     height: 70px; /* Kleinere Navigation */
@@ -126,6 +122,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 40px; /* Kleinerer Abstand */
+    padding-top: 80px;
     padding: 40px 15px;
 }
 
@@ -801,7 +798,7 @@ footer button {
     .profilbild-nav {
         height: 40px;
         width: 40px;
-        right: 15px;
+        right: 23px;
     }
     
     #header-container h1 {
@@ -820,6 +817,7 @@ footer button {
     .main-container {
         gap: 25px;
         padding: 25px 10px;
+        padding-top: 100px;
     }
     
     #it-skills li {
