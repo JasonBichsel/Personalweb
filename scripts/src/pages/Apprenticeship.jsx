@@ -98,26 +98,31 @@ function Apprenticeship() {
                     </section>
                 </div>
             </main>
-
             <footer id="contact-footer">
                 <div id="details">
                     <div>
-                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>{t("footer.applyCompanies")}</button></a>
-                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>{t("footer.appliedCompanies")}</button></a>
-                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub <i className="fab fa-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>LinkedIn <i className="fab fa-linkedin"></i></button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer">
+                            <button>{t("footer.applyCompanies")}</button>
+                        </a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer">
+                            <button>{t("footer.appliedCompanies")}</button>
+                        </a>
+                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer">
+                            <button>GitHub <i className="fab fa-github"></i></button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer">
+                            <button>LinkedIn <i className="fab fa-linkedin"></i></button>
+                        </a>
                     </div>
 
                     <div className="navigation-footer">
-                        <div className="navigation-footer2">
-                            <strong className="navigation-title">{t("nav.navigation")}:</strong>
-                            <ul>
-                                <li><Link to="/">{t("nav.welcome")}</Link></li>
-                                <li><Link to="/Apprenticeship">{t("nav.apprenticeship")}</Link></li>
-                                <li><Link to="/projects">{t("nav.projects")}</Link></li>
-                                <li><Link to="/Contact-form">{t("nav.contactForm")}</Link></li>
-                            </ul>
-                        </div>
+                        <strong className="navigation-title">{t("nav.navigation")}:</strong>
+                        <ul>
+                            <li><Link to="/">{t("nav.welcome")}</Link></li>
+                            <li><Link to="/Apprenticeship">{t("nav.apprenticeship")}</Link></li>
+                            <li><Link to="/projects">{t("nav.projects")}</Link></li>
+                            <li><Link to="/Contact-form">{t("nav.contactForm")}</Link></li>
+                        </ul>
                     </div>
 
                     <div className="contact-footer-block">
@@ -135,7 +140,9 @@ function Apprenticeship() {
                         <i className="fab fa-linkedin"></i>
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
-                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github"></i>
+                    </a>
                 </div>
             </footer>
         </div>

@@ -24,7 +24,6 @@ function Project() {
     const { t, i18n } = useTranslation();
     const containerRef = useRef(null);
 
-
     // Variablen für Drag-Scroll
     let isDown = false;
     let startX;
@@ -146,11 +145,29 @@ function Project() {
     const scroll = (direction) => {
         const container = containerRef.current;
         const scrollAmount = 300;
+
         if (!container) return;
-        container.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        if (direction === 'left') {
+            if (container.scrollLeft <= 0) {
+                // Springe ans Ende (Endlosschleife)
+                container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        } else if (direction === 'right') {
+            if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+                // Springe zum Anfang (Endlosschleife)
+                container.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
     };
 
-    // Drag Scroll Logik
+    // DRAG START
     const handleMouseDown = (e) => {
         isDown = true;
         containerRef.current.classList.add('active');
@@ -158,46 +175,102 @@ function Project() {
         scrollLeft = containerRef.current.scrollLeft;
     };
 
+    // DRAG END
     const handleMouseLeave = () => {
         isDown = false;
         containerRef.current.classList.remove('active');
     };
-
     const handleMouseUp = () => {
         isDown = false;
         containerRef.current.classList.remove('active');
+
+        // ➕ Endloslogik nach dem Loslassen (wenn z. B. ans Ende/Anfang gezogen)
+        const container = containerRef.current;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        if (container.scrollLeft <= 0) {
+            container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+        } else if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+        }
     };
 
+    // DRAG MOVE
     const handleMouseMove = (e) => {
         if (!isDown) return;
+
         e.preventDefault();
-        const x = e.pageX - containerRef.current.offsetLeft;
-        const walk = (x - startX) * 2;
-        containerRef.current.scrollLeft = scrollLeft - walk;
+        const container = containerRef.current;
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5; // Scroll-Geschwindigkeit
+        container.scrollLeft = scrollLeft - walk;
     };
 
-    // useEffect für Auto-Scroll und Endlosschleife
     useEffect(() => {
         const container = containerRef.current;
+        if (!container) return;
 
-        const handleScroll = () => {
-            const maxScrollLeft = container.scrollWidth - container.clientWidth;
-            if (container.scrollLeft >= maxScrollLeft - 1) {
-                container.scrollLeft = 0;
-            }
+        let currentIndex = 0;
+        let isPaused = false;
+
+        const getCardWidth = () => {
+            const firstCard = container.querySelector('.reference-card');
+            if (!firstCard) return 300; // Fallback
+            return firstCard.offsetWidth + 16; // +16 für gap
         };
 
-        const scrollInterval = setInterval(() => {
-            container.scrollBy({ left: 1, behavior: "smooth" });
-        }, 30); // optional: automatisch scrollen
+        const getTotalCards = () => {
+            return container.querySelectorAll('.reference-card').length;
+        };
 
-        container.addEventListener("scroll", handleScroll);
+        const scrollToCard = (index) => {
+            const cardWidth = getCardWidth();
+            container.scrollTo({
+                left: index * cardWidth,
+                behavior: 'smooth'
+            });
+        };
+
+        const nextCard = () => {
+            if (isPaused) return;
+
+            const totalCards = getTotalCards();
+            const visibleCards = Math.floor(container.clientWidth / getCardWidth());
+            const maxIndex = totalCards - visibleCards;
+
+            currentIndex++;
+
+            // Wenn wir am Ende sind, zurück zum Anfang
+            if (currentIndex > maxIndex) {
+                currentIndex = 0;
+            }
+
+            scrollToCard(currentIndex);
+        };
+
+        // Hover-Events für Pause-Funktion
+        const handleMouseEnter = () => {
+            isPaused = true;
+        };
+
+        const handleMouseLeave = () => {
+            isPaused = false;
+        };
+
+        // Hauptintervall: Alle 3 Sekunden zur nächsten Karte
+        const cardInterval = setInterval(nextCard, 3000);
+
+        // Event Listeners hinzufügen
+        container.addEventListener("mouseenter", handleMouseEnter);
+        container.addEventListener("mouseleave", handleMouseLeave);
+
+        // Cleanup
         return () => {
-            container.removeEventListener("scroll", handleScroll);
-            clearInterval(scrollInterval);
+            clearInterval(cardInterval);
+            container.removeEventListener("mouseenter", handleMouseEnter);
+            container.removeEventListener("mouseleave", handleMouseLeave);
         };
     }, []);
-
 
     return (
         <div id="homepage-backgrund">
@@ -205,7 +278,7 @@ function Project() {
                 <button
                     className="burger-menu"
                     onClick={() => setNavOpen(!navOpen)}
-                    aria-label="Menü öffnen/schließen"
+                    aria-label="Toggle menu"
                 >
                     <span />
                     <span />
@@ -366,22 +439,28 @@ function Project() {
             <footer id="contact-footer">
                 <div id="details">
                     <div>
-                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>{t("footer.applyCompanies")}</button></a>
-                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>{t("footer.appliedCompanies")}</button></a>
-                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub <i className="fab fa-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>LinkedIn <i className="fab fa-linkedin"></i></button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer">
+                            <button>{t("footer.applyCompanies")}</button>
+                        </a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer">
+                            <button>{t("footer.appliedCompanies")}</button>
+                        </a>
+                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer">
+                            <button>GitHub <i className="fab fa-github"></i></button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer">
+                            <button>LinkedIn <i className="fab fa-linkedin"></i></button>
+                        </a>
                     </div>
 
                     <div className="navigation-footer">
-                        <div className="navigation-footer2">
-                            <strong className="navigation-title">{t("nav.navigation")}:</strong>
-                            <ul>
-                                <li><Link to="/">{t("nav.welcome")}</Link></li>
-                                <li><Link to="/Apprenticeship">{t("nav.apprenticeship")}</Link></li>
-                                <li><Link to="/projects">{t("nav.projects")}</Link></li>
-                                <li><Link to="/Contact-form">{t("nav.contactForm")}</Link></li>
-                            </ul>
-                        </div>
+                        <strong className="navigation-title">{t("nav.navigation")}:</strong>
+                        <ul>
+                            <li><Link to="/">{t("nav.welcome")}</Link></li>
+                            <li><Link to="/Apprenticeship">{t("nav.apprenticeship")}</Link></li>
+                            <li><Link to="/projects">{t("nav.projects")}</Link></li>
+                            <li><Link to="/Contact-form">{t("nav.contactForm")}</Link></li>
+                        </ul>
                     </div>
 
                     <div className="contact-footer-block">
@@ -399,7 +478,9 @@ function Project() {
                         <i className="fab fa-linkedin"></i>
                     </a>
                     <p className="linkedin-name"><strong>Jason Bichsel</strong></p>
-                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                    <a className="github-link" href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github"></i>
+                    </a>
                 </div>
             </footer>
         </div >

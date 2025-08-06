@@ -77,8 +77,7 @@ function Zeugnis() {
                     </div>
                 </div>
             </main>
-
-            <footer id="contact-footer">
+<footer id="contact-footer">
                 <div id="details">
                     <div>
                         <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer">
