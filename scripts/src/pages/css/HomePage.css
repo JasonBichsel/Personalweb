@@ -153,19 +153,6 @@ header {
     padding: 40px 15px;
 }
 
-.semester-container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    border-collapse: collapse;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    front-size: 1.2em;
-}
-
 #main-content {
     flex: 1 1 0;
     display: flex;

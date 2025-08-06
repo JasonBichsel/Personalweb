@@ -230,17 +230,6 @@
       }
     ]
   },
-  "references": {
-    "title": "Referenzen",
-    "names": {
-      "friend": "Ein Schulfreund"
-    },
-    "texts": {
-      "friend": "Kreativ und zuverlässig – gerne wieder.",
-      "company": "Hat unsere Anforderungen schnell umgesetzt.",
-      "tictactoe": "Einfach, aber sehr gut programmiert!"
-    }
-  },
   "buttons": {
     "viewMore": "Mehr anzeigen",
     "showLess": "Weniger anzeigen"
@@ -283,7 +272,7 @@
       "immobilien": "Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen."
     }
   },
-    "references": {
+  "references": {
     "title": "Referenzen",
     "names": {
       "placeholder": "Kommt bald"
