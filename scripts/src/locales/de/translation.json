@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "welcome": "Willkommen",
+    "apprenticeship": "Ausbildung",
+    "projects": "Projekte",
+    "contactForm": "Kontaktformular",
+    "navigation": "Navigation"
+  },
+  "intro": {
+    "title": "Hallo, ich bin Jason.",
+    "text": "Ich bin 17 Jahre alt und Auszubildender als Informatiker in der Fachrichtung Applikationsentwicklung."
+  },
+  "about": {
+    "title": "Über mich",
+    "downloadCV": "Lebenslauf herunterladen",
+    "p1": "Schon seit meiner Kindheit war es mein Ziel, Informatiker zu werden. Nun bin ich an der WISS, um meinen Berufswunsch zu verwirklichen.",
+    "p2": "Mein Interesse an der Informatik wurde schon früh geweckt, durch mein Drang zu verstehen, wie Technologien funktionieren und entwickelt werden.",
+    "p3": "Zu meinen Stärken zählen insbesondere mein Zeitmanagement und mein analytisches Problemlösungsvermögen. Diese Fähigkeiten helfen mir, komplexe Herausforderungen strukturiert anzugehen.",
+    "p4": "In der Teamarbeit lege ich grossen Wert auf ein respektvolles und produktives Arbeitsumfeld, das von offenen Gesprächen und gegenseitiger Unterstützung lebt.",
+    "p5": "Ich bin überzeugt, dass ich mit meinen Kompetenzen aktiv zu einer erfolgreichen Zusammenarbeit beitragen kann."
+  },
+  "interests": {
+    "title": "Interessen",
+    "text": "Computer zusammenbauen, Webseiten erstellen, Strategiespiele und Polizeiserien."
+  },
+  "footer": {
+    "applyCompanies": "Firmen Bewerbung",
+    "appliedCompanies": "Die beworbenen Firmen",
+    "contactData": "Kontaktdaten"
+  },
+  "apprenticeship": {
+    "skillsTitle": "IT-Fähigkeiten",
+    "educationTitle": "Ausbildung",
+    "viewCertificate": "Zeugnis ansehen",
+    "school": "Schule",
+    "location": "Ort",
+    "startDate": "Startdatum",
+    "endDate": "Enddatum",
+    "skills": [
+      {
+        "name": "Linux Docker",
+        "rating": 8
+      },
+      {
+        "name": "Java",
+        "rating": 6
+      },
+      {
+        "name": "NoSQL MongoDB",
+        "rating": 6
+      },
+      {
+        "name": "HTML",
+        "rating": 6
+      },
+      {
+        "name": "Linux Bash",
+        "rating": 6
+      },
+      {
+        "name": "JavaScript",
+        "rating": 6
+      },
+      {
+        "name": "MySQL",
+        "rating": 4
+      },
+      {
+        "name": "PHP",
+        "rating": 2
+      }
+    ],
+    "education": [
+      {
+        "heading": "Informatiker Applikationsentwicklung",
+        "school": "WISS Schulen für Wirtschaft Informatik Immobilien",
+        "location": "Zürich, Zürich-Altstetten",
+        "start": "August 2023",
+        "end": "August 2027 (im Prozess)"
+      },
+      {
+        "heading": "Sekundarschule",
+        "school": "Rotkreuz Oberstufenschule Sekundarstufe",
+        "location": "Zug, Rotkreuz",
+        "start": "August 2020",
+        "end": "August 2023"
+      },
+      {
+        "heading": "Primarschule",
+        "school": "Rotkreuz Primarschule",
+        "location": "Zug, Rotkreuz",
+        "start": "August 2014",
+        "end": "August 2020"
+      }
+    ]
+  },
+  "certificate": {
+    "title": "Zeugnis",
+    "semester": "Semester",
+    "S1": [
+      {
+        "module": "117 Implementieren von IT- und Netzwerkinfrastruktur für ein Kleinunternehmen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "122 Automatisieren von Prozessen mit einer Skriptsprache",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "162 Analysieren und Modellieren von Daten",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "164 Erstellen von Datenbanken und Einfügen von Daten",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "231 Anwenden von Datenschutz und Sicherheit",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "319 Entwerfen und Implementieren von Anwendungen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "431 Selbstständiges Bearbeiten von Aufgaben in der eigenen beruflichen Umgebung",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "187 Einrichten von ICT-Arbeitsplatz mit Betriebssystem (UEK)",
+        "grade": "Abgeschlossen"
+      }
+    ],
+    "S2": [
+      {
+        "module": "114 Anwenden von Codierung, Kompression und Verschlüsselung",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "254 Beschreiben von Geschäftsprozessen im beruflichen Umfeld",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "293 Erstellen und Veröffentlichen einer Website",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "306 Managen kleiner Projekte im eigenen Bereich",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "320 Objektorientierte Programmierung",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "347 Verwenden von Diensten mit Containern",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "106 Abfragen, Bearbeiten und Pflegen von Datenbanken (UEK)",
+        "grade": "Abgeschlossen"
+      }
+    ],
+    "S3": [
+      {
+        "module": "165 Verwenden von NoSQL-Datenbanken",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "322 Entwerfen und Implementieren von Benutzeroberflächen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "323 Funktionale Programmierung",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "346 Entwerfen und Implementieren von Cloud-Lösungen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "426 Entwickeln von Software mit agilen Methoden",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "294 Implementierung des Frontends einer interaktiven Web-App (UEK)",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "295 Implementierung des Backends für Anwendungen (UEK)",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "210 Verwenden von Public Cloud für Anwendungen (UEK)",
+        "grade": "Abgeschlossen"
+      }
+    ],
+    "S4": [
+      {
+        "module": "183 Implementierung von Anwendungssicherheit",
+        "grade": "5.5"
+      },
+      {
+        "module": "241 Initiieren innovativer ICT-Lösungen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "245 Implementieren innovativer ICT-Lösungen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "321 Programmieren verteilter Systeme",
+        "grade": "6"
+      },
+      {
+        "module": "324 Unterstützen von DevOps-Prozessen mit Tools",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "450 Testen von Anwendungen",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "223 Implementieren von Mehrbenutzer-Anwendungen mit OOP (UEK)",
+        "grade": "Abgeschlossen"
+      },
+      {
+        "module": "335 Entwickeln von mobilen Anwendungen (UEK)",
+        "grade": "Abgeschlossen"
+      }
+    ]
+  },
+  "references": {
+    "title": "Referenzen",
+    "names": {
+      "friend": "Ein Schulfreund"
+    },
+    "texts": {
+      "friend": "Kreativ und zuverlässig – gerne wieder.",
+      "company": "Hat unsere Anforderungen schnell umgesetzt.",
+      "tictactoe": "Einfach, aber sehr gut programmiert!"
+    }
+  },
+  "buttons": {
+    "viewMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen"
+  },
+  "contactForm": {
+    "title": "Kontaktformular",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden"
+  },
+  "projects": {
+    "title": "Projekte",
+    "mainProjects": "Grösste Projekte",
+    "otherProjects": "Weitere Projekte",
+    "status": "Status",
+    "statusOptions": {
+      "Fertig": "Fertig",
+      "Verbesserung": "In Überarbeitung",
+      "Entwicklung": "In Entwicklung"
+    },
+    "titles": {
+      "notepad": "Notizblock",
+      "calculator": "Taschenrechner",
+      "randomGame": "Zahlenspiel",
+      "clicker": "Käfer-Clicker",
+      "shoppinglist": "Einkaufsliste",
+      "tictactoe": "Tic-Tac-Toe",
+      "firmen": "Firmenbewerbungsplattform",
+      "immobilien": "Immobilienplattform"
+    },
+    "descriptions": {
+      "notepad": "Eine einfache Notiz-Java applikation, die es ermöglicht, Notizen zu erstellen, zu bearbeiten und zu löschen.",
+      "calculator": "Eine einfache Java Applikation, die es ermöglicht, einfache mathematische Operationen durchzuführen.",
+      "randomGame": "Eine einfache Java Applikation, die es ermöglicht, zufällige Zahlen zu generieren und zu raten.",
+      "clicker": "Ein einfaches Klickspiel, bei dem die Spieler Käfer klicken müssen, um Punkte zu sammeln.",
+      "shoppinglist": "Eine einfache Android App, die es ermöglicht, eine Einkaufsliste zu erstellen und zu verwalten.",
+      "tictactoe": "Es ist ein einfaches Tic-Tac-Toe-Spiel mit ein paar Erweiterungen, damit der Spielspass etwas länger anhält. Anstelle von X und O werden Bilder verwendet, und das Spielfeld kann auf bis zu 5×5 Felder vergrößert werden.",
+      "firmen": "Diese Webseite ermöglicht es Firmen, mich durch die Registrierung zu kontaktieren. Jede Firma erhält garantiert eine E-Mail von mir. Zudem können sie jederzeit den aktuellen Status meiner Bewerbung auf der Webseite einsehen.",
+      "immobilien": "Es ist eine Website, auf der Mitarbeitende schnell und einfach Immobilien zum Verkauf stellen können. Die Kunden können schnell und übersichtlich die Immobilien mit Bildern und Daten Ersichtigen."
+    }
+  },
+    "references": {
+    "title": "Referenzen",
+    "names": {
+      "placeholder": "Kommt bald"
+    },
+    "texts": {
+      "placeholder": "Kommt bald"
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "nav": {
+    "welcome": "Welcome",
+    "apprenticeship": "Apprenticeship",
+    "projects": "Projects",
+    "contactForm": "Contact Form",
+    "navigation": "Navigation"
+  },
+  "intro": {
+    "title": "Hi, I'm Jason.",
+    "text": "I'm 17 years old and an apprentice in application development."
+  },
+  "about": {
+    "title": "About Me",
+    "downloadCV": "Download CV",
+    "p1": "Since childhood, it has been my goal to become a computer scientist. Now I’m at WISS to pursue my dream profession.",
+    "p2": "My interest in computer science started early, driven by my curiosity to understand how technologies work and are developed.",
+    "p3": "My strengths include time management and analytical problem-solving skills. These help me tackle complex challenges in a structured way.",
+    "p4": "In teamwork, I value a respectful and productive environment supported by open communication and mutual support.",
+    "p5": "I am confident that I can actively contribute to a successful collaboration with my skills."
+  },
+  "interests": {
+    "title": "Interests",
+    "text": "Building computers, creating websites, strategy games, and police series."
+  },
+  "footer": {
+    "applyCompanies": "Apply to Companies",
+    "appliedCompanies": "Companies I've Applied To",
+    "contactData": "Contact Information"
+  },
+  "apprenticeship": {
+    "skillsTitle": "IT Skills",
+    "educationTitle": "Education",
+    "viewCertificate": "View Certificate",
+    "school": "School",
+    "location": "Location",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "skills": [
+      {
+        "name": "Linux Docker",
+        "rating": 8
+      },
+      {
+        "name": "Java",
+        "rating": 6
+      },
+      {
+        "name": "NoSQL MongoDB",
+        "rating": 6
+      },
+      {
+        "name": "HTML",
+        "rating": 6
+      },
+      {
+        "name": "Linux Bash",
+        "rating": 6
+      },
+      {
+        "name": "JavaScript",
+        "rating": 6
+      },
+      {
+        "name": "MySQL",
+        "rating": 4
+      },
+      {
+        "name": "PHP",
+        "rating": 2
+      }
+    ],
+    "education": [
+      {
+        "heading": "Application Development IT Specialist",
+        "school": "WISS School for Business, IT and Real Estate",
+        "location": "Zurich, Altstetten",
+        "start": "August 2023",
+        "end": "August 2027 (in progress)"
+      },
+      {
+        "heading": "Secondary School",
+        "school": "Rotkreuz Upper Secondary School",
+        "location": "Zug, Rotkreuz",
+        "start": "August 2020",
+        "end": "August 2023"
+      },
+      {
+        "heading": "Primary School",
+        "school": "Rotkreuz Primary School",
+        "location": "Zug, Rotkreuz",
+        "start": "August 2014",
+        "end": "August 2020"
+      }
+    ]
+  },
+  "certificate": {
+    "title": "Report Card",
+    "semester": "Semester",
+    "S1": [
+      {
+        "module": "117 Implement IT and network infrastructure for a small business",
+        "grade": "Completed"
+      },
+      {
+        "module": "122 Automate processes with a scripting language",
+        "grade": "Completed"
+      },
+      {
+        "module": "162 Analyze and model data",
+        "grade": "Completed"
+      },
+      {
+        "module": "164 Create databases and insert data",
+        "grade": "Completed"
+      },
+      {
+        "module": "231 Apply data protection and security",
+        "grade": "Completed"
+      },
+      {
+        "module": "319 Design and implement applications",
+        "grade": "Completed"
+      },
+      {
+        "module": "431 Independently complete tasks in your own professional environment",
+        "grade": "Completed"
+      },
+      {
+        "module": "187 Set up ICT workstation with OS (UEK)",
+        "grade": "Completed"
+      }
+    ],
+    "S2": [
+      {
+        "module": "114 Use coding, compression, and encryption techniques",
+        "grade": "Completed"
+      },
+      {
+        "module": "254 Describe business processes in your professional environment",
+        "grade": "Completed"
+      },
+      {
+        "module": "293 Create and publish a website",
+        "grade": "Completed"
+      },
+      {
+        "module": "306 Manage small projects in your field",
+        "grade": "Completed"
+      },
+      {
+        "module": "320 Object-oriented programming",
+        "grade": "Completed"
+      },
+      {
+        "module": "347 Use services with containers",
+        "grade": "Completed"
+      },
+      {
+        "module": "106 Query, edit, and maintain databases (UEK)",
+        "grade": "Completed"
+      }
+    ],
+    "S3": [
+      {
+        "module": "165 Use NoSQL databases",
+        "grade": "Completed"
+      },
+      {
+        "module": "322 Design and implement user interfaces",
+        "grade": "Completed"
+      },
+      {
+        "module": "323 Functional programming",
+        "grade": "Completed"
+      },
+      {
+        "module": "346 Design and implement cloud solutions",
+        "grade": "Completed"
+      },
+      {
+        "module": "426 Develop software using agile methods",
+        "grade": "Completed"
+      },
+      {
+        "module": "294 Implement frontend of an interactive web app (UEK)",
+        "grade": "Completed"
+      },
+      {
+        "module": "295 Implement backend for applications (UEK)",
+        "grade": "Completed"
+      },
+      {
+        "module": "210 Use public cloud for applications (UEK)",
+        "grade": "Completed"
+      }
+    ],
+    "S4": [
+      {
+        "module": "183 Implement application security",
+        "grade": "5.5"
+      },
+      {
+        "module": "241 Initiate innovative ICT solutions",
+        "grade": "Completed"
+      },
+      {
+        "module": "245 Implement innovative ICT solutions",
+        "grade": "Completed"
+      },
+      {
+        "module": "321 Program distributed systems",
+        "grade": "6"
+      },
+      {
+        "module": "324 Support DevOps processes with tools",
+        "grade": "Completed"
+      },
+      {
+        "module": "450 Test applications",
+        "grade": "Completed"
+      },
+      {
+        "module": "223 Implement multi-user applications with OOP (UEK)",
+        "grade": "Completed"
+      },
+      {
+        "module": "335 Develop mobile applications (UEK)",
+        "grade": "Completed"
+      }
+    ]
+  },
+  "buttons": {
+    "viewMore": "View More",
+    "showLess": "Show Less"
+  },
+  "contactForm": {
+    "title": "Contact Form",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  },
+  "projects": {
+    "title": "Projects",
+    "mainProjects": "Main Projects",
+    "otherProjects": "Other Projects",
+    "status": "Status",
+    "statusOptions": {
+      "Fertig": "Completed",
+      "Verbesserung": "In Progress",
+      "Entwicklung": "In Development"
+    },
+    "titles": {
+      "notepad": "Notepad",
+      "calculator": "Calculator",
+      "randomGame": "Random Number Game",
+      "clicker": "Bug Clicker",
+      "shoppinglist": "Shopping List",
+      "tictactoe": "Tic-Tac-Toe",
+      "firmen": "Company Application Platform",
+      "immobilien": "Real Estate Platform"
+    },
+    "descriptions": {
+      "notepad": "A simple Java notepad application that allows creating, editing, and deleting notes.",
+      "calculator": "A simple Java application that allows performing basic mathematical operations.",
+      "randomGame": "A simple Java application that allows generating and guessing random numbers.",
+      "clicker": "A simple clicker game where players click bugs to collect points.",
+      "shoppinglist": "A simple Android app that allows creating and managing a shopping list.",
+      "tictactoe": "A simple Tic-Tac-Toe game with some extensions for longer fun. Instead of X and O, images are used, and the board can be expanded up to 5×5 squares.",
+      "firmen": "This website allows companies to contact me through registration. Every company is guaranteed an email from me. They can also view the current status of my application at any time on the website.",
+      "immobilien": "It is a website where employees can quickly and easily list properties for sale. Customers can quickly and clearly view properties with images and data."
+    }
+  },
+  "references": {
+    "title": "References",
+    "names": {
+      "placeholder": "Coming soon"
+    },
+    "texts": {
+      "placeholder": "Coming soon"
+    }
+  }
+}

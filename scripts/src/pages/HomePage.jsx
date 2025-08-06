@@ -1,16 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-//CSS
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./css/HomePage.css";
 
-//Imgs
 import Profile_picture from "./imgs/Profilbild.jpg";
 
 function HomePage() {
     const [navOpen, setNavOpen] = useState(false);
     const canvasRef = useRef(null);
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -25,27 +29,26 @@ function HomePage() {
         resizeCanvas();
         window.addEventListener("resize", resizeCanvas);
 
-        let fontSize = 32; // Titel größer, Animation größere Zeichen
+        let fontSize = 32;
         let columns, drops, lastDraw = 0;
+
         function setupMatrix() {
             columns = Math.floor(canvas.width / fontSize);
             drops = Array(columns).fill(1);
         }
+
         setupMatrix();
         window.addEventListener("resize", setupMatrix);
 
         function draw(now) {
-            // Langsamer: nur alle ~80ms neu zeichnen
             if (!lastDraw || now - lastDraw > 80) {
                 ctx.fillStyle = "rgba(0,0,0,0.28)";
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
-
                 ctx.font = fontSize + "px monospace";
                 ctx.fillStyle = "#fff";
                 for (let i = 0; i < drops.length; i++) {
                     const text = Math.floor(Math.random() * 10).toString();
                     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
                     if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) {
                         drops[i] = 0;
                     }
@@ -55,6 +58,7 @@ function HomePage() {
             }
             animationFrameId = requestAnimationFrame(draw);
         }
+
         animationFrameId = requestAnimationFrame(draw);
 
         return () => {
@@ -77,70 +81,88 @@ function HomePage() {
                     <span />
                 </button>
                 <ul className={navOpen ? "mobile-open" : ""}>
-                    <li><Link to="/">Welcome</Link></li>
-                    <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
-                    <li><Link to="/projects">Projecte</Link></li>
-                    <li><Link to="/Contact-form">Contact-form</Link></li>
+                    <li><Link to="/">{t("nav.welcome")}</Link></li>
+                    <li><Link to="/Apprenticeship">{t("nav.apprenticeship")}</Link></li>
+                    <li><Link to="/projects">{t("nav.projects")}</Link></li>
+                    <li><Link to="/Contact-form">{t("nav.contactForm")}</Link></li>
                 </ul>
-                <img src={Profile_picture} alt="Profil" className="profilbild-nav" />
+
+                <div className="profile-language-wrapper">
+
+                    <div className="language-switch">
+                        {i18n.language === "de" ? (
+                            <button onClick={() => changeLanguage("en")}>EN</button>
+                        ) : (
+                            <button onClick={() => changeLanguage("de")}>DE</button>
+                        )}
+                    </div>
+
+                    <img src={Profile_picture} alt="Profil" className="profilbild-nav" />
+                </div>
             </nav>
+
             <header id="header">
                 <canvas ref={canvasRef} id="canvas" />
                 <div id="header-container" className="content-section">
-                    <h1 className="animated-title" style={{ fontSize: "clamp(2.5em, 8vw, 5em)", color: "#fff" }}>Hallo, ich bin Jason.</h1>
+                    <h1 className="animated-title" style={{ fontSize: "clamp(2.5em, 8vw, 5em)", color: "#fff" }}>{t("intro.title")}</h1>
                     <div id="welcome-section" className="animated-welcome">
-                        <p>Ich bin 17 Jahre alt und Auszubildender als Informatiker in der Fachrichtung Applikationsentwicklung.</p>
+                        <p>{t("intro.text")}</p>
                     </div>
                 </div>
             </header>
+
             <main>
                 <div id="main-content" className="main-container">
                     <div id="about-me" className="content-section">
                         <div className="about-header-row">
-                            <h2>Über mich</h2>
+                            <h2>{t("about.title")}</h2>
                             <a className="Lebenslauf" href="/pdf/Lebenslauf-Jason-Bichsel.pdf" download>
-                                <button>Lebenslauf herunterladen</button>
+                                <button>{t("about.downloadCV")}</button>
                             </a>
                         </div>
-                        <p>Schon seit meiner Kindheit war es mein Ziel, Informatiker zu werden. Nun bin ich an der WISS, um meinen Berufswunsch zu verwirklichen.</p>
-                        <p>Mein Interesse an der Informatik wurde schon früh geweckt, durch mein Drang zu verstehen, wie Technologien funktionieren und entwickelt werden.</p>
-                        <p>Zu meinen Stärken zählen insbesondere mein Zeitmanagement und mein analytisches Problemlösungsvermögen. Diese Fähigkeiten helfen mir, komplexe Herausforderungen strukturiert anzugehen.</p>
-                        <p>In der Teamarbeit lege ich grossen Wert auf ein respektvolles und produktives Arbeitsumfeld, das von offenen Gesprächen und gegenseitiger Unterstützung lebt.</p>
-                        <p>Ich bin überzeugt, dass ich mit meinen Kompetenzen aktiv zu einer erfolgreichen Zusammenarbeit beitragen kann.</p>
+                        <p>{t("about.p1")}</p>
+                        <p>{t("about.p2")}</p>
+                        <p>{t("about.p3")}</p>
+                        <p>{t("about.p4")}</p>
+                        <p>{t("about.p5")}</p>
 
-                        <h2>Interessen</h2>
-                        <p>Computer zusammenbauen, Webseiten erstellen, Strategiespiele und Polizeiserien.</p>
+                        <h2>{t("interests.title")}</h2>
+                        <p>{t("interests.text")}</p>
                     </div>
                 </div>
             </main>
-            <footer id="contact-footer" >
+
+            <footer id="contact-footer">
                 <div id="details">
                     <div>
-                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>Firmen Bewerbung</button></a>
-                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>Die beworbenen Firmen</button></a>
-                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub: <i className="fab fa-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>Linkedin: <i className="fab fa-linkedin"></i></button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/register" target="_blank" rel="noopener noreferrer"><button>{t("footer.applyCompanies")}</button></a>
+                        <a href="https://firmen.jasonbichsel.com/#/firmen-list" target="_blank" rel="noopener noreferrer"><button>{t("footer.appliedCompanies")}</button></a>
+                        <a href="https://github.com/JasonBichsel" target="_blank" rel="noopener noreferrer"><button>GitHub <i className="fab fa-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer"><button>LinkedIn <i className="fab fa-linkedin"></i></button></a>
                     </div>
+
                     <div className="navigation-footer">
                         <div className="navigation-footer2">
-                            <strong className="navigation-title">Navigation:</strong>
+                            <strong className="navigation-title">{t("nav.navigation")}:</strong>
                             <ul>
-                                <li><Link to="/">Welcome</Link></li>
-                                <li><Link to="/Apprenticeship">Apprenticeship</Link></li>
-                                <li><Link to="/projects">Projecte</Link></li>
-                                <li><Link to="/Contact-form">Contact-form</Link></li>
+                                <li><Link to="/">{t("nav.welcome")}</Link></li>
+                                <li><Link to="/Apprenticeship">{t("nav.apprenticeship")}</Link></li>
+                                <li><Link to="/projects">{t("nav.projects")}</Link></li>
+                                <li><Link to="/Contact-form">{t("nav.contactForm")}</Link></li>
                             </ul>
                         </div>
                     </div>
-                    <div className="contact-footer-block" >
+
+                    <div className="contact-footer-block">
                         <div className="contact-inner">
-                            <strong>Kontaktdaten:</strong>
+                            <strong>{t("footer.contactData")}:</strong>
                             <p>Jason Bichsel</p>
                             <p>Email: <a href="mailto:bichsel6343@outlook.com">bichsel6343@outlook.com</a></p>
                             <p>Tel: 079 913 97 48</p>
                         </div>
                     </div>
                 </div>
+
                 <div className="social-links">
                     <a className="linkedin-link" href="https://www.linkedin.com/in/jason-bichsel/" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-linkedin"></i>
@@ -151,6 +173,6 @@ function HomePage() {
             </footer>
         </div>
     );
-
 }
+
 export default HomePage;

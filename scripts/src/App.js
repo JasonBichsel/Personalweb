@@ -5,6 +5,7 @@ import Certificate from './pages/Certificate';
 import Apprenticeship from './pages/Apprenticeship';
 import Project from './pages/Project';
 import ContactForm from './pages/Contact-form';
+import './i18n';
 
 function App() {
     return (
