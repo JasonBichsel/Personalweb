@@ -51,7 +51,6 @@ html {
 
 .navigation-bar {
     height: 70px;
-    /* Kleinere Navigation */
     padding: 0 15px;
     display: flex;
     align-items: center;
@@ -59,11 +58,15 @@ html {
     position: fixed;
     top: 0;
     left: 0;
+    /* WICHTIG: Exakte Breite ohne Overflow */
     width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
     background-color: #5e5c5a;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 100vw;
+    /* Verhindert dass die Nav-Bar breiter wird als der Screen */
+    overflow: hidden;
 }
 
 .navigation-bar ul {
@@ -609,7 +612,7 @@ footer button {
 .profile-language-wrapper {
     position: absolute;
     top: 50%;
-    right: 38px;
+    right: 10px;
     /* gleiche Position wie vorher */
     transform: translateY(-50%);
     display: flex;
@@ -1148,7 +1151,7 @@ footer button {
     }
 
     .profile-language-wrapper {
-        right: 28px;
+        right: 10px;
         top: 8px;
         transform: none;
         flex-direction: row;
@@ -1314,7 +1317,7 @@ footer button {
     }
 
     .profile-language-wrapper {
-        right: 28px;
+        right: 10px;
         top: 10px;
         gap: 5px;
     }
