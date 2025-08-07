@@ -13,8 +13,9 @@ import Notepad from './imgs/Notepad.jpg';
 import Calculator from './imgs/Calculator.jpg';
 import RandomNumberGame from './imgs/Random.Number.Game.jpg';
 import FirmenBP from './imgs/FirmenBP.jpg';
-import KäferClicker from './imgs/Käfer-Clickergame.png';
+import KäferClicker from './imgs/Käfer-Clickergame.jpg';
 import Profile_picture from './imgs/Profilbild.jpg';
+import OldPersonalweb from './imgs/old-personalweb.jpg';
 
 function Project() {
     const [activeTab, setActiveTab] = useState("main");
@@ -40,7 +41,7 @@ function Project() {
             desc: t("projects.descriptions.notepad"),
             title: t("projects.titles.notepad"),
             github: "https://github.com/JasonBichsel/Notepad",
-            status: "Fertig"
+            status: t("projects.statusOptions.Fertig")
         },
         {
             img: Calculator,
@@ -48,7 +49,7 @@ function Project() {
             desc: t("projects.descriptions.calculator"),
             title: t("projects.titles.calculator"),
             github: "https://github.com/JasonBichsel/Calculator",
-            status: "Fertig"
+            status: t("projects.statusOptions.Fertig")
         },
         {
             img: RandomNumberGame,
@@ -56,7 +57,7 @@ function Project() {
             desc: t("projects.descriptions.randomGame"),
             title: t("projects.titles.randomGame"),
             github: "https://github.com/JasonBichsel/Random.Number.Game",
-            status: "Fertig"
+            status: t("projects.statusOptions.Fertig")
         },
         {
             img: KäferClicker,
@@ -64,7 +65,7 @@ function Project() {
             desc: t("projects.descriptions.clicker"),
             title: t("projects.titles.clicker"),
             github: "https://github.com/JasonBichsel/keafer-clickergame",
-            status: "Verbesserung"
+            status: t("projects.statusOptions.Verbesserung")
         },
         {
             img: PlaceholderImage,
@@ -72,7 +73,7 @@ function Project() {
             desc: t("projects.descriptions.shoppinglist"),
             title: t("projects.titles.shoppinglist"),
             github: "https://github.com/JasonBichsel/Shoppinglist",
-            status: "Verbesserung"
+            status: t("projects.statusOptions.Verbesserung")
         }
     ];
     const mainProjects = [
@@ -83,7 +84,7 @@ function Project() {
             title: t("projects.titles.tictactoe"),
             github: "https://github.com/JasonBichsel/Tic-Tac-Toe-with-imgs",
             live: "https://tic-tac-toe.jasonbichsel.com",
-            status: "Fertig"
+            status: t("projects.statusOptions.Fertig")
         },
         {
             img: FirmenBP,
@@ -92,7 +93,16 @@ function Project() {
             title: t("projects.titles.firmen"),
             github: "https://github.com/JasonBichsel/",
             live: "https://firmen.jasonbichsel.com/#/",
-            status: "Fertig"
+            status: t("projects.statusOptions.Fertig")
+        },
+        {
+            img: OldPersonalweb,
+            alt: "Old Personalweb",
+            desc: t("projects.descriptions.oldPersonalweb"),
+            title: t("projects.titles.oldPersonalweb"),
+            github: "https://github.com/JasonBichsel/Old_Personalweb",
+            live: "https://old.jasonbichsel.com/",
+            status: t("projects.statusOptions.Fertig")
         },
         {
             img: PlaceholderImage,
@@ -101,7 +111,7 @@ function Project() {
             title: t("projects.titles.immobilien"),
             github: "https://github.com/JasonBichsel/",
             live: "https://jasonbichsel.github.io/",
-            status: "Entwicklung"
+            status: t("projects.statusOptions.Entwicklung")
         }
     ];
 

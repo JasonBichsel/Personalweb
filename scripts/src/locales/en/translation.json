@@ -252,6 +252,7 @@
       "Entwicklung": "In Development"
     },
     "titles": {
+      "oldPersonalweb": "Old Personal Website",
       "notepad": "Notepad",
       "calculator": "Calculator",
       "randomGame": "Random Number Game",
@@ -262,6 +263,7 @@
       "immobilien": "Real Estate Platform"
     },
     "descriptions": {
+      "oldPersonalweb": "This is an old version of my personal website. It showcases my progress and skills in web development.",
       "notepad": "A simple Java notepad application that allows creating, editing, and deleting notes.",
       "calculator": "A simple Java application that allows performing basic mathematical operations.",
       "randomGame": "A simple Java application that allows generating and guessing random numbers.",
