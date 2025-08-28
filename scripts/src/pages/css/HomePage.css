@@ -1020,8 +1020,15 @@ footer button {
     /* Oder wähle eine neutrale Farbe wie Türkis oder Blau */
 }
 
+.Contact-formname{
+    gap: 40px;
+    /* Kleinerer Abstand */
+    padding-top: 80px;
+    padding: 40px 15px;
+}
+
 #Contact-form form {
-    max-width: 600px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.05);
@@ -1044,10 +1051,12 @@ footer button {
 #Contact-form input[type="email"],
 #Contact-form textarea,
 #Contact-form button[type="submit"] {
-    width: 100%;
-    padding: 10px 140px;
-    font-size: 0.95em;
-    border: none;
+    width: 100%;        /* nimm die ganze Formularbreite */
+    max-width: none;    /* NICHT durch 800px limitieren */
+    height: 50px;       /* Höhe erhöhen */
+    padding: 0 14px;    /* Text ganz links */
+    font-size: 1.1em;   /* etwas größere Schrift */
+  
     border-radius: 8px;
     box-sizing: border-box;
 }

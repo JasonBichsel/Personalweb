@@ -49,7 +49,7 @@ function Contactform() {
                 </div>
             </nav>
             <main>
-                <div id="main-content" className="main-container">
+                <div id="main-content" className="Contact-formname">
                     <div id="Contact-form" className="content-section">
                         <h2>{t("contactForm.title")}</h2>
                         <form action="https://formsubmit.co/Bichsel6343@outlook.com" method="POST">
